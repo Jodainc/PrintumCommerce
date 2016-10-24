@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintumCommerce", "PrintumCommerce\PrintumCommerce.csproj", "{A5A0F516-1469-4388-A8F2-BC5E2C4AF332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintumCommerce.Tests", "PrintumCommerce.Tests\PrintumCommerce.Tests.csproj", "{693C536C-81FA-432F-ACD7-54E5DBCDE9AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5A0F516-1469-4388-A8F2-BC5E2C4AF332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A0F516-1469-4388-A8F2-BC5E2C4AF332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A0F516-1469-4388-A8F2-BC5E2C4AF332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A0F516-1469-4388-A8F2-BC5E2C4AF332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{693C536C-81FA-432F-ACD7-54E5DBCDE9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693C536C-81FA-432F-ACD7-54E5DBCDE9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693C536C-81FA-432F-ACD7-54E5DBCDE9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693C536C-81FA-432F-ACD7-54E5DBCDE9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
