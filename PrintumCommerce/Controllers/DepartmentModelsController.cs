@@ -51,8 +51,22 @@ namespace PrintumCommerce.Controllers
             if (ModelState.IsValid)
             {
                 db.DepartmentModels.Add(departmentModel);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    if (ex.InnerException != null && ex.InnerException.InnerException != null && ex.InnerException.Message.Contains("Index"))
+                    {
+                        ModelState.AddModelError(string.Empty, "La casilla {0} ya existe en la tabla");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, ex.Message);
+                    }
+                }
             }
 
             return View(departmentModel);
@@ -83,8 +97,23 @@ namespace PrintumCommerce.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(departmentModel).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+
+                    if (ex.InnerException != null && ex.InnerException.InnerException != null && ex.InnerException.Message.Contains("Index"))
+                    {
+                        ModelState.AddModelError(string.Empty, "La casilla {0} ya existe en la tabla");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, ex.Message);
+                    }
+                }
             }
             return View(departmentModel);
         }
@@ -111,8 +140,23 @@ namespace PrintumCommerce.Controllers
         {
             DepartmentModel departmentModel = db.DepartmentModels.Find(id);
             db.DepartmentModels.Remove(departmentModel);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null && ex.InnerException.InnerException != null && ex.InnerException.Message.Contains("REFERENCE"))
+                {
+                    ModelState.AddModelError(string.Empty, "La casilla {0} no puede ser eliminada, relaciones en otras tablas");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, ex.Message);
+                }
+            }
+            return View(departmentModel);
         }
 
         protected override void Dispose(bool disposing)

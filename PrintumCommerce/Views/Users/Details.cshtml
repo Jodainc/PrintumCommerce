@@ -1,0 +1,90 @@
+﻿@model PrintumCommerce.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.City.CitiesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City.CitiesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentModel.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentModel.DepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserPhoto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

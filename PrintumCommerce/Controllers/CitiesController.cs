@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PrintumCommerce.Models;
+using PrintumCommerce.ClassHelper;
 
 namespace PrintumCommerce.Controllers
 {
@@ -39,7 +40,7 @@ namespace PrintumCommerce.Controllers
         // GET: Cities/Create
         public ActionResult Create()
         {
-            ViewBag.DepartmentId = new SelectList(db.DepartmentModels, "DepartmentId", "DepartmentName");
+            ViewBag.DepartmentId = new SelectList(ComboHelper.getDepartment(), "DepartmentId", "DepartmentName");
             return View();
         }
 
@@ -57,7 +58,7 @@ namespace PrintumCommerce.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DepartmentId = new SelectList(db.DepartmentModels, "DepartmentId", "DepartmentName", city.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(ComboHelper.getDepartment(), "DepartmentId", "DepartmentName", city.DepartmentId);
             return View(city);
         }
 
@@ -73,7 +74,7 @@ namespace PrintumCommerce.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.DepartmentId = new SelectList(db.DepartmentModels, "DepartmentId", "DepartmentName", city.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(ComboHelper.getDepartment(), "DepartmentId", "DepartmentName", city.DepartmentId);
             return View(city);
         }
 
@@ -90,7 +91,7 @@ namespace PrintumCommerce.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DepartmentId = new SelectList(db.DepartmentModels, "DepartmentId", "DepartmentName", city.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(ComboHelper.getDepartment(), "DepartmentId", "DepartmentName", city.DepartmentId);
             return View(city);
         }
 
@@ -116,8 +117,23 @@ namespace PrintumCommerce.Controllers
         {
             City city = db.Cities.Find(id);
             db.Cities.Remove(city);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                if(ex.InnerException!= null && ex.InnerException.InnerException != null && ex.InnerException.Message.Contains("REFERENCE"))
+                {
+                    ModelState.AddModelError(string.Empty, "La casilla {0} no puede ser eliminada, relaciones en otras tablas");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, ex.Message);
+                }
+            }
+            return View(city);
         }
 
         protected override void Dispose(bool disposing)
