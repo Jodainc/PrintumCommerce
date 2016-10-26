@@ -11,7 +11,7 @@ namespace PrintumCommerce.Models
     {
         public DBPrintumContext():base("DefaultConnection")
         {
-
+            //Database.SetInitializer<DBPrintumContext>(new CreateDatabaseIfNotExists<DBPrintumContext>());
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -25,5 +25,7 @@ namespace PrintumCommerce.Models
         public System.Data.Entity.DbSet<PrintumCommerce.Models.Company> Companies { get; set; }
 
         public System.Data.Entity.DbSet<PrintumCommerce.Models.User> Users { get; set; }
+
+      
     }
 }

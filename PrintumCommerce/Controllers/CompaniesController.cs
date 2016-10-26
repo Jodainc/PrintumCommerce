@@ -63,10 +63,10 @@ namespace PrintumCommerce.Controllers
                 {
       
                     var folder = "~/Content/Golo";
-                    var response = FilHelper.UploadPhoto(company.CompanyPhotoFile, folder,string.Format("{0}",company.CompanyId));
+                    var response = FilHelper.UploadPhoto(company.CompanyPhotoFile, folder,string.Format("{0}.jpg", company.CompanyId));
                     if (response)
                     {
-                        var pic = string.Format("{0}/{1}", folder, company.CompanyId);
+                        var pic = string.Format("{0}/{1}.jpg", folder, company.CompanyId);
                         company.CompanyPhoto = pic;
                         db.Entry(company).State = EntityState.Modified;
                         db.SaveChanges();
@@ -112,10 +112,10 @@ namespace PrintumCommerce.Controllers
 
                 if (company.CompanyPhotoFile != null)
                 {
-                    var response = FilHelper.UploadPhoto(company.CompanyPhotoFile, folder, string.Format("{0}", company.CompanyId));
+                    var response = FilHelper.UploadPhoto(company.CompanyPhotoFile, folder, string.Format("{0}.jpg", company.CompanyId));
                     if (response)
                     {
-                       pic  = string.Format("{0}/{1}", folder, company.CompanyId);
+                       pic  = string.Format("{0}/{1}.jpg", folder, company.CompanyId);
                         company.CompanyPhoto = pic;
                     }
                    

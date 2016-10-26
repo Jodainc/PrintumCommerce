@@ -24,10 +24,7 @@
             @Html.DisplayNameFor(model => model.UserName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.Fullname)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UserPhone)
@@ -56,11 +53,9 @@
             @Html.DisplayFor(modelItem => item.UserName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(modelItem => item.Fullname)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.UserPhone)
         </td>
@@ -68,7 +63,10 @@
             @Html.DisplayFor(modelItem => item.UserAddress)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UserPhoto)
+            @if (!string.IsNullOrEmpty(item.UserPhoto))
+            {
+                <img src="@Url.Content(item.UserPhoto)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.Pro_Grupos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro_Lineas.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VT_Vlr_Liq.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro_Lineas.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VT_Vlr_Liq.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Grupo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Grupo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Grupo })
+        </td>
+    </tr>
+}
+
+</table>
