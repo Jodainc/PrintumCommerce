@@ -4,11 +4,108 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Printum Web Customer</title>
+    @Scripts.RenderFormat(@"<script src=""{0}"" async></script>", "~/Content/Layout")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="description" content="Our Simple MVC project and BookStore E-Commerce web site..." />
+    <meta name="keywords" content="MVC,BookStore,Project,AliCoskun,MuratFatihArkan,ASPNET,.NET,Bootstrap,Model,View,Controller" />
+    <meta name="designer" content="Ali Coskun, Murat Fatih ARKAN" />
+    <meta name="rating" content="General" />
+    <meta name="generator" content="Visual Studio Community 2016" />
+    <meta name="reply-to" content="muratfatiharkan@yandex.com.tr" />
+    <meta name="copyright" content="(c)All Rights Reserved" />
+    <meta name="author" content="Ali Coskun,ali.coskun@kocsistem.com.tr,Murat Fatih Arkan,fatih.arkan@kocsistem.com.tr" />
+    <script src="~/Content/js/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" async />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" async />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" async />
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/images/favicon32x32.png" />
+    <link href="~/Content/css/RalewayFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/PompiereFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/OpenSansFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/FascinateFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" async />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" async>
+    <script src="~/Content/js/wow.min.js"></script>
+    <!--//animation-effect-->
+    <!--start-smooth-scrolling-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) { event.preventDefault(); $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000); });
+        });
+    </script>
+    <!--//end-smooth-scrolling-->
 </head>
 <body>
+
+        <!--//header-->
+        @RenderBody()
+        <!--footer-->
+        <div class="footer">
+            <div class="container">
+                <div class="footer-info">
+                    <div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".5s">
+                        <h4 class="footer-logo"><a href='@Url.Action("Index", "Home")'>Book <b>Store</b> <span class="tag">Everything for People </span> </a></h4>
+                        <p>© 2016 Book Store . All rights reserved | Design by <a href="http://alicoskun.me" target="_blank">Ali Coşkun</a></p>
+                    </div>
+                    <div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".7s">
+                        <h3>Popular</h3>
+                        <ul>
+                            <li><a href='@Url.Action("About", "Home")'>About Us</a></li>
+                            <li><a href='@Url.Action("Products", "Home")'>new</a></li>
+                            <li><a href='@Url.Action("Contact", "Home")'>Contact Us</a></li>
+                            <li><a href='@Url.Action("FAQ", "Home")'>FAQ</a></li>
+                            <li><a href='@Url.Action("Checkout", "Home")'>Wishlist</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
+                        <h3>Subscribe</h3>
+                        <p>Sign Up Now For More Information <br> About Our Shop </p>
+                        <form>
+                            <div>
+                                <input type="text" id="mailaddresssubs" onblur="CheckMailSubs();" placeholder="Enter Your Email" required="">
+                                <input type="submit" value="Go" onclick="SendMail(); return false;">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--//footer-->
+        <!--search jQuery-->
+        <script src="~/Content/js/move-top.js"></script>
+        <script src="~/Content/js/main.js"> </script>
+        <!--//search jQuery-->
+        <!--smooth-scrolling-of-move-up-->
+        @*
+    <script async type="text/javascript">
+        $(document).ready(function () {
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+        *@
+        <!--//smooth-scrolling-of-move-up-->
+        <!--Bootstrap core JavaScript
+        ================================================== -->
+        <!--Placed at the end of the document so the pages load faster -->
+        <script src="~/Content/js/bootstrap.min.js" async></script>
+    </div>
+
+    @*
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -32,7 +129,6 @@
     <li>@Html.ActionLink("Lineas", "Index", "Pro_Lineas")</li>
     <li>@Html.ActionLink("Grupos", "Index", "Pro_Grupos")</li>
     <li>@Html.ActionLink("Pro_Pre", "Index", "Pro_Presentacion")</li>
-                    *@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -49,5 +145,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+        *@
 </body>
 </html>
