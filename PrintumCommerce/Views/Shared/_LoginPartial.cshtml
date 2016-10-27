@@ -1,13 +1,41 @@
-﻿@using Microsoft.AspNet.Identity
+﻿<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Printum Web Customer</title>
+    @Scripts.RenderFormat(@"<script src=""{0}"" async></script>", "~/Content/Layout")
+
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Content/js/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" async />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" async />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" async />
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/images/favicon32x32.png" />
+    <link href="~/Content/css/RalewayFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/PompiereFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/OpenSansFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/FascinateFont.css" rel="stylesheet" async />
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" async />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" async>
+    <script src="~/Content/js/wow.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) { event.preventDefault(); $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000); });
+        });
+    </script>
+    <!--//end-smooth-scrolling-->
+</head>
+
+@using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
     @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav wow fadeInLeft animated">
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
@@ -15,7 +43,7 @@
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav wow fadeInLeft animated">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>

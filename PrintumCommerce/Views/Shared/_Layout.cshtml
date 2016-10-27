@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Printum Web Customer</title>
     @Scripts.RenderFormat(@"<script src=""{0}"" async></script>", "~/Content/Layout")
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-Language" content="en" />
-    <meta name="description" content="Our Simple MVC project and BookStore E-Commerce web site..." />
-    <meta name="keywords" content="MVC,BookStore,Project,AliCoskun,MuratFatihArkan,ASPNET,.NET,Bootstrap,Model,View,Controller" />
-    <meta name="designer" content="Ali Coskun, Murat Fatih ARKAN" />
-    <meta name="rating" content="General" />
-    <meta name="generator" content="Visual Studio Community 2016" />
-    <meta name="reply-to" content="muratfatiharkan@yandex.com.tr" />
-    <meta name="copyright" content="(c)All Rights Reserved" />
-    <meta name="author" content="Ali Coskun,ali.coskun@kocsistem.com.tr,Murat Fatih Arkan,fatih.arkan@kocsistem.com.tr" />
+ 
+    @Scripts.Render("~/bundles/modernizr")
     <script src="~/Content/js/jquery-1.11.1.min.js"></script>
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" async />
     <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" async />
@@ -31,8 +21,6 @@
     <link href="~/Content/css/jquery-ui.css" rel="stylesheet" async />
     <link href="~/Content/css/animate.min.css" rel="stylesheet" async>
     <script src="~/Content/js/wow.min.js"></script>
-    <!--//animation-effect-->
-    <!--start-smooth-scrolling-->
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) { event.preventDefault(); $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000); });
@@ -40,34 +28,385 @@
     </script>
     <!--//end-smooth-scrolling-->
 </head>
+@using Microsoft.AspNet.Identity
 <body>
+    <div>
+        <!--header-->
+        <div class="header">
+            <div class="top-header navbar navbar-default">
+                <!--header-one-->
+                <div class="container">
+                    <div class="nav navbar-nav wow fadeInRight animated" data-wow-delay=".5s">
+    @if (Request.IsAuthenticated)
+    {
+        <p>
+            Bienvenido a PrintumAPP
+        </p>
 
-        <!--//header-->
+    }
+    else
+    {
+        <div class="nav navbar-nav navbar-r " data-wow-delay=".7s">
+                <li>   Bienvenido a PrintumAPP </li>
+                <li>
+             <div class="cart-box">
+                                <p> @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</p>
+                                <div class="clearfix"> </div>
+                            </div>
+           </li>
+            <li>
+                <div class="cart-box">
+                    <p> @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</p>
+                    <div class="clearfix"> </div>
+                </div>
+            </li>
+</div>
+                                               
+                                                                                                 
+                                                        }
+</div>
+                    <div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated" data-wow-delay=".5s">
+                        <ul>
+                          
+                            <li><a href="#"> </a></li>
+                            <li><a href="#" class="pin"> </a></li>
+                            <li><a href="#" class="in"> </a></li>
+                            <li><a href="#" class="be"> </a></li>
+                            <li><a href="#" class="you"> </a></li>
+                            <li><a href="#" class="vimeo"> </a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="header-two navbar navbar-default">
+                <!--header-two-->
+                <div class="container">
+                    <div class="nav navbar-nav header-two-left">
+                        <ul>
+                            @*
+                                <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li>*@
+                            <li>
+                                @*@if (!(Session["UserLogin"] == null))
+                                    {
+                                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>@Session["UserLogin"]
+
+                                    }*@
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav navbar-nav logo wow zoomIn animated" data-wow-delay=".7s">
+                        <h1>
+                            <a href='@Url.Action("Index", "Home")'>
+                                pRiN <b>TuM</b>
+                                <span class="tag">Especialistas en Tegnología ultravioleta </span>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="nav navbar-nav navbar-right header-right">
+                        <div class="header-right my-account">
+                            <div class="dropdown">
+                                <a class="btn btn-default dropdown-toggle" style="background-color:#DCDCDC;" id="UserMenu" data-toggle="dropdown">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    @using Microsoft.AspNet.Identity
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        <strong> Dear , User </strong>
+                                        <ul class="dropdown-menu dropdown-menu-left" role="menu" >
+                                            <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" role="menuitem" href="#">My Cart</a></li>
+                                            <li role="presentation" class="divider"></li>
+                                            <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" href='@Url.Action("FullProfile", "Home")'>Full Profile</a></li>
+                                            <li role="presentation" class="divider"></li>
+                                            <li role="presentation">
+                                                 @if (Request.IsAuthenticated) { using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" })) { @Html.AntiForgeryToken()   <ul class="nav navbar-nav wow fadeInLeft animated">
+                                                        <li>
+                                                            @Html.ActionLink("Hello " + string.Format("{0}", User.Identity.GetUserName().ToString().Remove(8)) + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+                                                        </li>
+                                                        <li> <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                                                    </ul>
+                                                }
+                                                                    }
+                                            </li>
+                                        </ul>
+                                    }
+                                                                else
+                                                                {
+                                        <strong> Dear , Guest </strong>
+                                                                }
+                                </a>
+
+
+                            </div>
+                        </div>
+                        <div class="header-right cart">
+                            <a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                            <h4>
+                                <a href='@Url.Action("Checkout", "Home")'>
+                                    <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)
+                                </a>
+                            </h4>
+                            <div class="cart-box">
+                                <p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="top-nav navbar navbar-default">
+                <!--header-three-->
+                <div class="container">
+                    <nav class="navbar" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!--navbar-header-->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav top-nav-info">
+                                <li><a href='@Url.Action("Index", "Home")' class="active">Home</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Baby<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column multi-column1">
+                                        <div class="row">
+                                            <div class="col-sm-4 menu-grids menulist1">
+                                                <h4>Bath & Care</h4>
+                                                <ul class="multi-column-dropdown ">
+                                                    <li><a class="list" href="products.html">Diapering</a></li>
+                                                    <li><a class="list" href="products.html">Baby Wipes</a></li>
+                                                    <li><a class="list" href="products.html">Baby Soaps</a></li>
+                                                    <li><a class="list" href="products.html">Lotions & Oils </a></li>
+                                                    <li><a class="list" href="products.html">Powders</a></li>
+                                                    <li><a class="list" href="products.html">Shampoos</a></li>
+                                                </ul>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Body Wash</a></li>
+                                                    <li><a class="list" href="products.html">Cloth Diapers</a></li>
+                                                    <li><a class="list" href="products.html">Baby Nappies</a></li>
+                                                    <li><a class="list" href="products.html">Medical Care</a></li>
+                                                    <li><a class="list" href="products.html">Grooming</a></li>
+                                                    <li><h6><a class="list" href="products.html">Combo Packs</a></h6></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-2 menu-grids">
+                                                <h4>Baby Clothes</h4>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Onesies & Rompers</a></li>
+                                                    <li><a class="list" href="products.html">Frocks</a></li>
+                                                    <li><a class="list" href="products.html">Socks & Tights</a></li>
+                                                    <li><a class="list" href="products.html">Sweaters & Caps</a></li>
+                                                    <li><a class="list" href="products.html">Night Wear</a></li>
+                                                    <li><a class="list" href="products.html">Quilts & Wraps</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 menu-grids">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Blankets</a></li>
+                                                    <li><a class="list" href="products.html">Gloves & Mittens</a></li>
+                                                    <h4>Shop by Age</h4>
+                                                    <li><a class="list" href="products.html">New Born (0 - 5 M)</a></li>
+                                                    <li><a class="list" href="products.html">5 - 10 Months</a></li>
+                                                    <li><a class="list" href="products.html">10 - 15 Months</a></li>
+                                                    <li><a class="list" href="products.html">15 Months Above</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 menu-grids">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><h6><a class="list" href="products.html">Feeding & Nursing</a></h6></li>
+                                                    <h4>Baby Gear</h4>
+                                                    <li><a class="list" href="products.html">Baby Walkers</a></li>
+                                                    <li><a class="list" href="products.html">Strollers</a></li>
+                                                    <li><a class="list" href="products.html">Prams & Toys</a></li>
+                                                    <li><a class="list" href="products.html">Cribs & Cradles</a></li>
+                                                    <li><a class="list" href="products.html">Booster Seats</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown grid">
+                                    <a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Kids<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column multi-column2">
+                                        <div class="row">
+                                            <div class="col-sm-3 menu-grids">
+                                                <h4>New Arrivals</h4>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Topwear</a></li>
+                                                    <li><a class="list" href="products.html">Bottomwear</a></li>
+                                                    <li><a class="list" href="products.html">Innerwear</a></li>
+                                                    <li><a class="list" href="products.html">Nightwear</a></li>
+                                                    <li><a class="list" href="products.html">Swimwear</a></li>
+                                                    <li><a class="list" href="products.html">Jumpers</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 menu-grids">
+                                                <h4>Boys</h4>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Jeans</a></li>
+                                                    <li><a class="list" href="products.html">Shirts</a></li>
+                                                    <li><a class="list" href="products.html">T-shirts</a></li>
+                                                    <li><a class="list" href="products.html">Dhoti Kurta Sets</a></li>
+                                                    <li><a class="list" href="products.html">Winter wear</a></li>
+                                                    <li><a class="list" href="products.html">Party Wear</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 menu-grids">
+                                                <h4>Girls</h4>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Tops</a></li>
+                                                    <li><a class="list" href="products.html">Leggings</a></li>
+                                                    <li><a class="list" href="products.html">Dresses </a></li>
+                                                    <li><a class="list" href="products.html">Skirts</a></li>
+                                                    <li><a class="list" href="products.html">Casual Dresses</a></li>
+                                                    <li><a class="list" href="products.html">Capris & 3/4ths</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 menu-grids new-add2">
+                                                <a href="products.html">
+                                                    <h6>Kids Special</h6>
+                                                    <img src="~/Content/images/img1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown grid">
+                                    <a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Accessories<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column menu-two multi-column3">
+                                        <div class="row">
+                                            <div class="col-sm-4 menu-grids">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Jewellery</a></li>
+                                                    <li><a class="list" href="products.html">Hair bands & Clips</a></li>
+                                                    <li><a class="list" href="products.html">Bangles </a></li>
+                                                    <li><a class="list" href="products.html">Caps & Belts</a></li>
+                                                    <li><a class="list" href="products.html">Rain wear</a></li>
+                                                    <li><a class="list" href="products.html">Bags</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-8 menu-grids">
+                                                <a href="products.html">
+                                                    <div class="new-add">
+                                                        <h5>30% OFF <br> Today Only</h5>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown grid">
+                                    <a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Toys <b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column multi-column4">
+                                        <div class="row">
+                                            <div class="col-sm-4 menu-grids menulist1">
+                                                <h4>BABY</h4>
+                                                <ul class="multi-column-dropdown ">
+                                                    <li><a class="list" href="products.html">Rockers</a></li>
+                                                    <li><a class="list" href="products.html">Rattles</a></li>
+                                                    <li><a class="list" href="products.html">Stroller Toys</a></li>
+                                                    <li><a class="list" href="products.html">Musical Toys </a></li>
+                                                    <li><a class="list" href="products.html">Doll Houses</a></li>
+                                                    <li><a class="list" href="products.html">Play Sets</a></li>
+                                                </ul>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Toys Dolls</a></li>
+                                                    <li><a class="list" href="products.html">Pacifiers</a></li>
+                                                    <li><a class="list" href="products.html">Building Sets</a></li>
+                                                    <li><a class="list" href="products.html">Bath Toys</a></li>
+                                                    <li><a class="list" href="products.html">Soft Toys</a></li>
+                                                    <li><h6><a class="list" href="products.html">Special Off</a></h6></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-2 menu-grids">
+                                                <h4>Pretend Play</h4>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><h6><a class="list" href="products.html">Video Games</a></h6></li>
+                                                    <li><a class="list" href="products.html">Kitchen Sets</a></li>
+                                                    <li><a class="list" href="products.html">Sand Toys</a></li>
+                                                    <li><a class="list" href="products.html">Tool Sets</a></li>
+                                                    <li><a class="list" href="products.html">Bath Toys</a></li>
+                                                    <li><a class="list" href="products.html">Medical Set</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-2 menu-grids">
+                                                <h4>Outdoor</h4>
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a class="list" href="products.html">Swimming</a></li>
+                                                    <li><a class="list" href="products.html">Rideons </a></li>
+                                                    <li><a class="list" href="products.html">Scooters</a></li>
+                                                    <li><a class="list" href="products.html">Remote Control</a></li>
+                                                    <li><a class="list" href="products.html">Animals</a></li>
+                                                    <li><a class="list" href="products.html">Make up</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4 menu-grids">
+                                                <a href="products.html">
+                                                    <div class="new-add">
+                                                        <h5>30% OFF <br> Today Only</h5>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li><a href="codes.html">Special Offers</a></li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                            <!--//navbar-collapse-->
+                            <header class="cd-main-header">
+                                <ul class="cd-header-buttons">
+                                    <li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+                                </ul> <!-- cd-header-buttons -->
+                            </header>
+                        </div>
+                        <!--//navbar-header-->
+                    </nav>
+                    <div id="cd-search" class="cd-search">
+                        <form>
+                            <input type="search" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @RenderBody()
         <!--footer-->
+
         <div class="footer">
             <div class="container">
                 <div class="footer-info">
                     <div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".5s">
-                        <h4 class="footer-logo"><a href='@Url.Action("Index", "Home")'>Book <b>Store</b> <span class="tag">Everything for People </span> </a></h4>
-                        <p>© 2016 Book Store . All rights reserved | Design by <a href="http://alicoskun.me" target="_blank">Ali Coşkun</a></p>
+                        <h4 class="footer-logo"><a href='@Url.Action("Index", "Home")'>pRiN <b>TuM</b> <span class="tag">Especialistas en Tinturas </span> </a></h4>
+                        <p> Copyright ©2016 pRiNTuM . All rights reserved | Powered By  <a href="http://jhosuegalindo.uphero.com/" target="_blank">JodaINC</a></p>
                     </div>
                     <div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".7s">
-                        <h3>Popular</h3>
+                        <h3>Conócenos</h3>
                         <ul>
-                            <li><a href='@Url.Action("About", "Home")'>About Us</a></li>
-                            <li><a href='@Url.Action("Products", "Home")'>new</a></li>
-                            <li><a href='@Url.Action("Contact", "Home")'>Contact Us</a></li>
+                            <li><a href='@Url.Action("About", "Home")'>Acerca de Nosotros</a></li>
+                            <li><a href='@Url.Action("Products", "Home")'>Productos</a></li>
+                            <li><a href='@Url.Action("Contact", "Home")'>Contactenos</a></li>
                             <li><a href='@Url.Action("FAQ", "Home")'>FAQ</a></li>
-                            <li><a href='@Url.Action("Checkout", "Home")'>Wishlist</a></li>
+                            <li><a href='@Url.Action("Checkout", "Home")'>Innovaciones</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 footer-grids wow fadeInUp animated" data-wow-delay=".9s">
-                        <h3>Subscribe</h3>
-                        <p>Sign Up Now For More Information <br> About Our Shop </p>
+                        <h3>Información</h3>
+                        <p>Ingrese para mayor información <br> de Printum </p>
                         <form>
                             <div>
-                                <input type="text" id="mailaddresssubs" onblur="CheckMailSubs();" placeholder="Enter Your Email" required="">
+                                <input type="text" id="mailaddresssubs" onblur="CheckMailSubs();" placeholder="Digite su Email" required="">
                                 <input type="submit" value="Go" onclick="SendMail(); return false;">
                             </div>
                         </form>
@@ -75,76 +414,76 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+
+            <!--//footer-->
+            <!--search jQuery-->
+            <script src="~/Content/js/move-top.js"></script>
+            <script src="~/Content/js/main.js"> </script>
+            <!--//search jQuery-->
+            <!--smooth-scrolling-of-move-up-->
+            @*
+                <script async type="text/javascript">
+                    $(document).ready(function () {
+
+                        var defaults = {
+                            containerID: 'toTop', // fading element id
+                            containerHoverID: 'toTopHover', // fading element hover id
+                            scrollSpeed: 1200,
+                            easingType: 'linear'
+                        };
+
+                        $().UItoTop({ easingType: 'easeOutQuart' });
+
+                    });
+                </script>
+            *@
+            <!--//smooth-scrolling-of-move-up-->
+            <!--Bootstrap core JavaScript
+            ================================================== -->
+            <!--Placed at the end of the document so the pages load faster -->
+            <script src="~/Content/js/bootstrap.min.js" async></script>
         </div>
-        <!--//footer-->
-        <!--search jQuery-->
-        <script src="~/Content/js/move-top.js"></script>
-        <script src="~/Content/js/main.js"> </script>
-        <!--//search jQuery-->
-        <!--smooth-scrolling-of-move-up-->
+
         @*
-    <script async type="text/javascript">
-        $(document).ready(function () {
-
-            var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear'
-            };
-
-            $().UItoTop({ easingType: 'easeOutQuart' });
-
-        });
-    </script>
-        *@
-        <!--//smooth-scrolling-of-move-up-->
-        <!--Bootstrap core JavaScript
-        ================================================== -->
-        <!--Placed at the end of the document so the pages load faster -->
-        <script src="~/Content/js/bootstrap.min.js" async></script>
-    </div>
-
-    @*
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Departaments", "Index", "DepartmentModels")</li>
+                            <li>@Html.ActionLink("Cities", "Index", "Cities")</li>
+                            <li>@Html.ActionLink("Compa�ia", "Index", "Companies")</li>
+                            <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
+                            @* Comment�s
+            <li>@Html.ActionLink("Lineas", "Index", "Pro_Lineas")</li>
+            <li>@Html.ActionLink("Grupos", "Index", "Pro_Grupos")</li>
+            <li>@Html.ActionLink("Pro_Pre", "Index", "Pro_Presentacion")</li>
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Departaments", "Index", "DepartmentModels")</li>
-                    <li>@Html.ActionLink("Cities", "Index", "Cities")</li>
-                    <li>@Html.ActionLink("Compañia", "Index", "Companies")</li>
-                    <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
-                    @* Comment´s
-    <li>@Html.ActionLink("Lineas", "Index", "Pro_Lineas")</li>
-    <li>@Html.ActionLink("Grupos", "Index", "Pro_Grupos")</li>
-    <li>@Html.ActionLink("Pro_Pre", "Index", "Pro_Presentacion")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Powered by Jodainc</p>
+                </footer>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Powered by Jodainc</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
         *@
 </body>
-</html>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
