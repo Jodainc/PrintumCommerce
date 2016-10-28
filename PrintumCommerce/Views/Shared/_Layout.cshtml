@@ -107,37 +107,45 @@
                         <div class="header-right my-account">
                             <div class="dropdown">
                                 <a class="btn btn-default dropdown-toggle" style="background-color:#DCDCDC;" id="UserMenu" data-toggle="dropdown">
-                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                    @using Microsoft.AspNet.Identity
-                                    @if (Request.IsAuthenticated)
-                                    {
-                                        <strong> Dear , User </strong>
-                                        <ul class="dropdown-menu dropdown-menu-left" role="menu" >
-                                            <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" role="menuitem" href="#">My Cart</a></li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" href='@Url.Action("FullProfile", "Home")'>Full Profile</a></li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation">
-                                                 @if (Request.IsAuthenticated) { using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" })) { @Html.AntiForgeryToken()   <ul class="nav navbar-nav wow fadeInLeft animated">
-                                                        <li>
-                                                            @Html.ActionLink("Hello " + string.Format("{0}", User.Identity.GetUserName().ToString().Remove(8)) + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                   
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                        @using Microsoft.AspNet.Identity
+                                        @if (Request.IsAuthenticated)
+                                        {
 
-                                                        </li>
-                                                        <li> <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-                                                    </ul>
-                                                }
-                                                                    }
-                                            </li>
-                                        </ul>
-                                    }
-                                                                else
-                                                                {
-                                        <strong> Dear , Guest </strong>
-                                                                }
-                                </a>
+                                            <strong> Dear , User </strong>
+                                            <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                                                <a class="btn btn-default dropdown-toggle" style="background-color:#DCDCDC;visibility:hidden" id="UserMenu" data-toggle="dropdown">
+                                                    <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" role="menuitem" href="#">My Cart</a></li>
+                                                    <li role="presentation" class="divider"></li>
+                                                    <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" href='@Url.Action("FullProfile", "Home")'>Full Profile</a></li>
+                                                    <li role="presentation" class="divider"></li>
+                                                    <li role="presentation">
+                                                        @if (Request.IsAuthenticated)
+                                                        {
+                                                            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                                            { @Html.AntiForgeryToken()   <ul class="nav navbar-nav wow fadeInLeft animated">
+                                                                <li>
+                                                                    @Html.ActionLink("Hello " + string.Format("{0}", User.Identity.GetUserName().ToString().Remove(8)) + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+                                                                </li>
+                                                                <li> <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                                                            </ul>
+
+                                                            }
+
+                                                        }
+                                            </ul>
 
 
-                            </div>
+
+                                        }
+                                        else
+                                        {
+
+                                            <strong> Dear , Guest </strong>
+                                        }
+</div>
                         </div>
                         <div class="header-right cart">
                             <a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
@@ -334,7 +342,157 @@
                                         </div>
                                     </ul>
                                 </li>
+
                                 <li><a href="codes.html">Ofertas Especiales</a></li>
+                                @if (User.IsInRole("AdminSystem"))
+                                {
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SuperUsuario<b class="caret"></b></a>
+                                        <ul class="dropdown-menu multi-column multi-column1">
+                                            <div class="row">
+                                                <div class="col-sm-4 menu-grids menulist1">
+                                                    <h4>Usuarios</h4>
+                                                    <ul class="multi-column-dropdown ">
+                                                        <li> @Html.ActionLink("Usuarios", "Index", "Users") </li>
+                                                        <li> @Html.ActionLink("Usuarios", "Index", "Users") </li>
+                                                        <li> @Html.ActionLink("Usuarios", "Index", "Users")</li>
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="col-sm-3 menu-grids">
+                                                    <ul class="multi-column-dropdown">
+
+                                                        <h4>Localizaciones</h4>
+                                                        <li>@Html.ActionLink("Departamentos", "Index", "DepartmentModels")</li>
+                                                        <li>@Html.ActionLink("Ciudades", "Index", "Cities")</li>
+                                          
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 menu-grids">
+                                                    <h4>Compañias</h4>
+                                                    <ul class="multi-column-dropdown">
+                                                        <li>@Html.ActionLink("Compa�ia", "Index", "Companies")</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-3 menu-grids">
+                                                    <ul class="multi-column-dropdown">
+                                                        <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
+                                                        <h4>Desarrollo tecnológico</h4>
+                                                        <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
+                                                        <li><a class="list" href="products.html">tINTAS</a></li>
+                                                        <li><a class="list" href="products.html">iNSUMO</a></li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                }
+                                    @if (User.IsInRole("User"))
+                                    {
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
+                                            <ul class="dropdown-menu multi-column multi-column1">
+                                                <div class="row">
+                                                    <div class="col-sm-4 menu-grids menulist1">
+                                                        <h4>rECUBRIMIENTOS</h4>
+                                                        <ul class="multi-column-dropdown ">
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO uV</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO bASE AGUA</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO pELICULA</a></li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+
+                                                            <h4>iNSUMO</h4>
+                                                            <li><a class="list" href="products.html">iNSUMO uV</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO eMPAQUE</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO oTRO</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-2 menu-grids">
+                                                        <h4>tINTAS</h4>
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><a class="list" href="products.html">tINTA eTIQUETA</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAPLAST</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAMETAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA cONVENCIONAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA sEGURIDAD</a></li>
+                                                            <li><a class="list" href="products.html">tINTA pROMOCIONAL</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
+                                                            <h4>Desarrollo tecnológico</h4>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
+                                                            <li><a class="list" href="products.html">tINTAS</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
+                                            <ul class="dropdown-menu multi-column multi-column1">
+                                                <div class="row">
+                                                    <div class="col-sm-4 menu-grids menulist1">
+                                                        <h4>rECUBRIMIENTOS</h4>
+                                                        <ul class="multi-column-dropdown ">
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO uV</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO bASE AGUA</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO pELICULA</a></li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+
+                                                            <h4>iNSUMO</h4>
+                                                            <li><a class="list" href="products.html">iNSUMO uV</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO eMPAQUE</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO oTRO</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-2 menu-grids">
+                                                        <h4>tINTAS</h4>
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><a class="list" href="products.html">tINTA eTIQUETA</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAPLAST</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAMETAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA cONVENCIONAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA sEGURIDAD</a></li>
+                                                            <li><a class="list" href="products.html">tINTA pROMOCIONAL</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
+                                                            <h4>Desarrollo tecnológico</h4>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
+                                                            <li><a class="list" href="products.html">tINTAS</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                    }
+
+                               
+
                             </ul>
                             <div class="clearfix"> </div>
                             <!--//navbar-collapse-->
@@ -343,6 +501,7 @@
                                     <li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
                                 </ul> <!-- cd-header-buttons -->
                             </header>
+
                         </div>
                         <!--//navbar-header-->
                     </nav>
