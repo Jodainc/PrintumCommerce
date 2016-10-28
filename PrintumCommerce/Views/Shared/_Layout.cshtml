@@ -107,46 +107,48 @@
                         <div class="header-right my-account">
                             <div class="dropdown">
                                 <a class="btn btn-default dropdown-toggle" style="background-color:#DCDCDC;" id="UserMenu" data-toggle="dropdown">
-                                   
-                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        @using Microsoft.AspNet.Identity
-                                        @if (Request.IsAuthenticated)
-                                        {
 
-                                            <strong> Dear , User </strong>
-                                            <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                                                <a class="btn btn-default dropdown-toggle" style="background-color:#DCDCDC;visibility:hidden" id="UserMenu" data-toggle="dropdown">
-                                                    <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" role="menuitem" href="#">My Cart</a></li>
-                                                    <li role="presentation" class="divider"></li>
-                                                    <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" href='@Url.Action("FullProfile", "Home")'>Full Profile</a></li>
-                                                    <li role="presentation" class="divider"></li>
-                                                    <li role="presentation">
-                                                        @if (Request.IsAuthenticated)
-                                                        {
-                                                            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                                                            { @Html.AntiForgeryToken()   <ul class="nav navbar-nav wow fadeInLeft animated">
-                                                                <li>
-                                                                    @Html.ActionLink("Hello " + string.Format("{0}", User.Identity.GetUserName().ToString().Remove(8)) + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    @using Microsoft.AspNet.Identity
+                                    @if (Request.IsAuthenticated)
+                                    {
 
-                                                                </li>
-                                                                <li> <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-                                                            </ul>
+                                        <strong> Dear , User </strong>
+                                        <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                                            <a class="btn btn-default dropdown-toggle" style="background-color:#DCDCDC;visibility:hidden" id="UserMenu" data-toggle="dropdown">
+                                                <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" role="menuitem" href="#">My Cart</a></li>
+                                                <li role="presentation" class="divider"></li>
+                                                <li role="presentation"><a style="text-align:center;font-family: 'Raleway', sans-serif;" href='@Url.Action("FullProfile", "Home")'>Full Profile</a></li>
+                                                <li role="presentation" class="divider"></li>
+                                                <li role="presentation">
+                                                    @if (Request.IsAuthenticated)
+                                                    {
+                                                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                                        { @Html.AntiForgeryToken()   <ul class="nav navbar-nav wow fadeInLeft animated">
+                                                            <li>
+                                                                @Html.ActionLink("Hello " + string.Format("{0}", User.Identity.GetUserName().ToString().Remove(8)) + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
 
-                                                            }
-
+                                                            </li>
+                                                            <li> <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                                                        </ul>
                                                         }
-                                            </ul>
 
+                                                    }
+                                                </ul>
 
+                                    }
+                        @if (!(Request.IsAuthenticated))
+                        {
+                                    <strong> Dear , Guest </strong>
+                                    
+                                   
 
-                                        }
-                                        else
-                                        {
+                        }
 
-                                            <strong> Dear , Guest </strong>
-                                        }
+                                            
+                                       
 </div>
-                        </div>
+</div>
                         <div class="header-right cart">
                             <a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
                             <h4>
