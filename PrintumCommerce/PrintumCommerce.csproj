@@ -198,6 +198,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProHe\pRO_hsEGController.cs" />
+    <Compile Include="Controllers\ProHe\pRO_hsEG_cOMPOController.cs" />
     <Compile Include="Controllers\Pro_GruposController.cs" />
     <Compile Include="Controllers\Pro_LineasController.cs" />
     <Compile Include="Controllers\pRO_lNController.cs" />
@@ -206,7 +207,64 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\DBPrintumContext\201611032114121_Initial.cs" />
+    <Compile Include="Migrations\DBPrintumContext\201611032114121_Initial.Designer.cs">
+      <DependentUpon>201611032114121_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBPrintumContext\201611041140596_Initial1.cs" />
+    <Compile Include="Migrations\DBPrintumContext\201611041140596_Initial1.Designer.cs">
+      <DependentUpon>201611041140596_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBPrintumContext\201611041147165_Initial2.cs" />
+    <Compile Include="Migrations\DBPrintumContext\201611041147165_Initial2.Designer.cs">
+      <DependentUpon>201611041147165_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBPrintumContext\Configuration.cs" />
+    <Compile Include="Migrations\Model1\201611032113583_Initial.cs" />
+    <Compile Include="Migrations\Model1\201611032113583_Initial.Designer.cs">
+      <DependentUpon>201611032113583_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041141499_Initial1.cs" />
+    <Compile Include="Migrations\Model1\201611041141499_Initial1.Designer.cs">
+      <DependentUpon>201611041141499_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041158413_Initial2.cs" />
+    <Compile Include="Migrations\Model1\201611041158413_Initial2.Designer.cs">
+      <DependentUpon>201611041158413_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041201038_Initial3.cs" />
+    <Compile Include="Migrations\Model1\201611041201038_Initial3.Designer.cs">
+      <DependentUpon>201611041201038_Initial3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041202079_Initial4.cs" />
+    <Compile Include="Migrations\Model1\201611041202079_Initial4.Designer.cs">
+      <DependentUpon>201611041202079_Initial4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041213174_Initial5.cs" />
+    <Compile Include="Migrations\Model1\201611041213174_Initial5.Designer.cs">
+      <DependentUpon>201611041213174_Initial5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041234585_Initial6.cs" />
+    <Compile Include="Migrations\Model1\201611041234585_Initial6.Designer.cs">
+      <DependentUpon>201611041234585_Initial6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041236297_Initial7.cs" />
+    <Compile Include="Migrations\Model1\201611041236297_Initial7.Designer.cs">
+      <DependentUpon>201611041236297_Initial7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041339566_Initial8.cs" />
+    <Compile Include="Migrations\Model1\201611041339566_Initial8.Designer.cs">
+      <DependentUpon>201611041339566_Initial8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041344058_Initial9.cs" />
+    <Compile Include="Migrations\Model1\201611041344058_Initial9.Designer.cs">
+      <DependentUpon>201611041344058_Initial9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611041346031_Initial10.cs" />
+    <Compile Include="Migrations\Model1\201611041346031_Initial10.Designer.cs">
+      <DependentUpon>201611041346031_Initial10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\ConfigurationB.cs" />
     <Compile Include="Models\Access\aDMIN_fORMULARIOS.cs" />
     <Compile Include="Models\Access\aTUALIZACION.cs" />
     <Compile Include="Models\Access\cHEQUE.cs" />
@@ -234,6 +292,7 @@
     <Compile Include="Models\Access\Pro_Envase.cs" />
     <Compile Include="Models\Access\Pro_Grupos.cs" />
     <Compile Include="Models\Access\pRO_hsEG.cs" />
+    <Compile Include="Models\Access\pRO_hsEG_cOMPO.cs" />
     <Compile Include="Models\Access\Pro_Lineas.cs" />
     <Compile Include="Models\Access\pRO_lN.cs" />
     <Compile Include="Models\Access\Pro_MP_Pedidos.cs" />
@@ -340,6 +399,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -428,12 +488,19 @@
     <Content Include="Views\Pro_Presentacion\Details.cshtml" />
     <Content Include="Views\Pro_Presentacion\Edit.cshtml" />
     <Content Include="Views\Pro_Presentacion\Index.cshtml" />
+    <Content Include="Views\Home\PDF.cshtml" />
+    <Content Include="Views\Shared\_PdfLayout.cshtml" />
     <Content Include="Views\pRO_hsEG\Create.cshtml" />
     <Content Include="Views\pRO_hsEG\Delete.cshtml" />
     <Content Include="Views\pRO_hsEG\Details.cshtml" />
     <Content Include="Views\pRO_hsEG\Edit.cshtml" />
     <Content Include="Views\pRO_hsEG\Index.cshtml" />
-    <Content Include="Views\Home\PDF.cshtml" />
+    <Content Include="Views\pRO_hsEG_cOMPO\Create.cshtml" />
+    <Content Include="Views\pRO_hsEG_cOMPO\Delete.cshtml" />
+    <Content Include="Views\pRO_hsEG_cOMPO\Details.cshtml" />
+    <Content Include="Views\pRO_hsEG_cOMPO\Edit.cshtml" />
+    <Content Include="Views\pRO_hsEG_cOMPO\Index.cshtml" />
+    <Content Include="Views\pRO_hsEG\PDF.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -454,6 +521,50 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\DBPrintumContext\201611032114121_Initial.resx">
+      <DependentUpon>201611032114121_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBPrintumContext\201611041140596_Initial1.resx">
+      <DependentUpon>201611041140596_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBPrintumContext\201611041147165_Initial2.resx">
+      <DependentUpon>201611041147165_Initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611032113583_Initial.resx">
+      <DependentUpon>201611032113583_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041141499_Initial1.resx">
+      <DependentUpon>201611041141499_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041158413_Initial2.resx">
+      <DependentUpon>201611041158413_Initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041201038_Initial3.resx">
+      <DependentUpon>201611041201038_Initial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041202079_Initial4.resx">
+      <DependentUpon>201611041202079_Initial4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041213174_Initial5.resx">
+      <DependentUpon>201611041213174_Initial5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041234585_Initial6.resx">
+      <DependentUpon>201611041234585_Initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041236297_Initial7.resx">
+      <DependentUpon>201611041236297_Initial7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041339566_Initial8.resx">
+      <DependentUpon>201611041339566_Initial8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041344058_Initial9.resx">
+      <DependentUpon>201611041344058_Initial9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611041346031_Initial10.resx">
+      <DependentUpon>201611041346031_Initial10.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

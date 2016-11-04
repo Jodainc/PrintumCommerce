@@ -15,7 +15,9 @@ namespace PrintumCommerce
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.DBPrintumContext, Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.Access.Model1, Migrations.Model1.ConfigurationB>());
+          //Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.DBPrintumContext, Migrations.DBPrintumContext.ConfigurationB>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.DBPrintumContext, Migrations.DBPrintumContext.Configuration>());
             CheckRolesAndSuperUsers();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

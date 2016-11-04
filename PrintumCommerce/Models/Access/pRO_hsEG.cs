@@ -175,7 +175,8 @@ namespace PrintumCommerce.Models.Access
 
         [Column("16pICT2", TypeName = "ntext")]
         public string C16pICT2 { get; set; }
-
         public virtual Producto Producto { get; set; }
+        public virtual ICollection<pRO_hsEG_cOMPO> RO_hsEG_cOMPO { get; set; }
+
     }
 }

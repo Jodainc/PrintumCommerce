@@ -1,0 +1,58 @@
+﻿@model PrintumCommerce.Models.Access.pRO_hsEG_cOMPO
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>pRO_hsEG_cOMPO</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.C2Codigo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.C2Codigo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.C2cOMPONENTE)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.C2cOMPONENTE)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.C2pORCEN)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.C2pORCEN)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.C2nOcAS)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.C2nOcAS)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idCode }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

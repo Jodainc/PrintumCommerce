@@ -14,5 +14,7 @@ namespace PrintumCommerce.Models.Access
 
         [StringLength(255)]
         public string Ciudad { get; set; }
+        [StringLength(255)]
+        public string Ciudad12 { get; set; }
     }
 }

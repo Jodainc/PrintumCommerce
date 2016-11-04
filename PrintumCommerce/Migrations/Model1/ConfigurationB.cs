@@ -1,18 +1,20 @@
-namespace PrintumCommerce.Migrations
+namespace PrintumCommerce.Migrations.Model1
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PrintumCommerce.Models.DBPrintumContext>
+    internal sealed class ConfigurationB : DbMigrationsConfiguration<PrintumCommerce.Models.Access.Model1>
     {
-        public Configuration()
+        public ConfigurationB()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
+            MigrationsDirectory = @"Migrations\Model1";
         }
 
-        protected override void Seed(PrintumCommerce.Models.DBPrintumContext context)
+        protected override void Seed(PrintumCommerce.Models.Access.Model1 context)
         {
             //  This method will be called after migrating to the latest version.
 

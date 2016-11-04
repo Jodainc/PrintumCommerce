@@ -1,327 +1,335 @@
-﻿@model IEnumerable<PrintumCommerce.Models.Access.pRO_hsEG>
+﻿@model Tuple<List<Course>, List<Faculty>, List<Student>>   
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Producto.Descripción)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C1nOMBRE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C1sINONIMOS)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C1fXqUIMICA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C1nOUN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C1iDpROVEE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C3rIESTOsALUD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C3iNHALACION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C3iNGESTION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C3cONTACpIEL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C3cONTACoJOS)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C4iNHALACION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C4iNGESTION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C4cONTACpIEL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C4cONTACoJOS)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5piNFLAMACION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5tEMaUTOiGNICION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5lIMITiNFLAMA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5pELIiNCENeXPLO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5mEDIeXTINCION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5pROcOMBUSTION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5pRECAUCIONES)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C5iNTRUCcONTRAfIRE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C6mEDIvERDITO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C7mANEJO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C7aLMACENAMIENTO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C8cONTROLiNG)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9aPARIENCIA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9vALOR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9eSTADOfISICO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9gRAVEDAD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9pUNTOeBULLI)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9pUNTOfUSION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9dENSIDAD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9vISCOSIDAD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9pH)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C9sOLUBILIDAD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C10eSTABILIquIMICA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C10aeVITAR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C10iNCOMPATIBILIDAD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C10pRPpELIxdESCOM)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C10pOLIMERIZACION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C11iNFOtOXICOLOGICA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C12iNFOeCOLOGICA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C13dISPOSICION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C14iNFOtRANSPORTE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C15iNFOrEGLAMENTA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C16nFPA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C16pICT1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.C16pICT2)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Producto.Descripción)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C1nOMBRE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C1sINONIMOS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C1fXqUIMICA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C1nOUN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C1iDpROVEE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C3rIESTOsALUD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C3iNHALACION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C3iNGESTION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C3cONTACpIEL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C3cONTACoJOS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C4iNHALACION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C4iNGESTION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C4cONTACpIEL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C4cONTACoJOS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5piNFLAMACION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5tEMaUTOiGNICION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5lIMITiNFLAMA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5pELIiNCENeXPLO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5mEDIeXTINCION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5pROcOMBUSTION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5pRECAUCIONES)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C5iNTRUCcONTRAfIRE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C6mEDIvERDITO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C7mANEJO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C7aLMACENAMIENTO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C8cONTROLiNG)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9aPARIENCIA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9vALOR)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9eSTADOfISICO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9gRAVEDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9pUNTOeBULLI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9pUNTOfUSION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9dENSIDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9vISCOSIDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9pH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C9sOLUBILIDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C10eSTABILIquIMICA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C10aeVITAR)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C10iNCOMPATIBILIDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C10pRPpELIxdESCOM)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C10pOLIMERIZACION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C11iNFOtOXICOLOGICA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C12iNFOeCOLOGICA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C13dISPOSICION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C14iNFOtRANSPORTE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C15iNFOrEGLAMENTA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C16nFPA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C16pICT1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.C16pICT2)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Codigo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Codigo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Codigo })
-        </td>
-    </tr>
-}
-
-</table>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.Descripción)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C1nOMBRE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C1sINONIMOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C1fXqUIMICA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C1nOUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C1iDpROVEE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C3rIESTOsALUD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C3iNHALACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C3iNGESTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C3cONTACpIEL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C3cONTACoJOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C4iNHALACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C4iNGESTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C4cONTACpIEL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C4cONTACoJOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5piNFLAMACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5tEMaUTOiGNICION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5lIMITiNFLAMA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5pELIiNCENeXPLO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5mEDIeXTINCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5pROcOMBUSTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5pRECAUCIONES)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C5iNTRUCcONTRAfIRE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C6mEDIvERDITO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C7mANEJO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C7aLMACENAMIENTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C8cONTROLiNG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9aPARIENCIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9vALOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9eSTADOfISICO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9gRAVEDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9pUNTOeBULLI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9pUNTOfUSION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9dENSIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9vISCOSIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9pH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C9sOLUBILIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C10eSTABILIquIMICA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C10aeVITAR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C10iNCOMPATIBILIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C10pRPpELIxdESCOM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C10pOLIMERIZACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C11iNFOtOXICOLOGICA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C12iNFOeCOLOGICA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C13dISPOSICION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C14iNFOtRANSPORTE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C15iNFOrEGLAMENTA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C16nFPA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C16pICT1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C16pICT2)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Descripción)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C1nOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C1sINONIMOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C1fXqUIMICA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C1nOUN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C1iDpROVEE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C3rIESTOsALUD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C3iNHALACION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C3iNGESTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C3cONTACpIEL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C3cONTACoJOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C4iNHALACION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C4iNGESTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C4cONTACpIEL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C4cONTACoJOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5piNFLAMACION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5tEMaUTOiGNICION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5lIMITiNFLAMA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5pELIiNCENeXPLO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5mEDIeXTINCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5pROcOMBUSTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5pRECAUCIONES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C5iNTRUCcONTRAfIRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C6mEDIvERDITO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C7mANEJO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C7aLMACENAMIENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C8cONTROLiNG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9aPARIENCIA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9vALOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9eSTADOfISICO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9gRAVEDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9pUNTOeBULLI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9pUNTOfUSION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9dENSIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9vISCOSIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9pH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C9sOLUBILIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C10eSTABILIquIMICA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C10aeVITAR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C10iNCOMPATIBILIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C10pRPpELIxdESCOM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C10pOLIMERIZACION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C11iNFOtOXICOLOGICA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C12iNFOeCOLOGICA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C13dISPOSICION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C14iNFOtRANSPORTE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C15iNFOrEGLAMENTA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C16nFPA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C16pICT1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C16pICT2)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Codigo }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Codigo }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Codigo })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

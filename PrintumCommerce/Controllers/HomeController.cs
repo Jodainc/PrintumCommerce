@@ -24,6 +24,7 @@ namespace PrintumCommerce.Controllers
                  a= new PdfResult(users.ToList(), "PDF");
 
                 return a;
+               //return View(users.ToList());
             }
             catch (Exception e)
             {

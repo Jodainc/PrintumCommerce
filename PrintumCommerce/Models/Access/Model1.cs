@@ -10,6 +10,7 @@ namespace PrintumCommerce.Models.Access
         public Model1()
             : base("name=AccessDBase")
         {
+            Database.SetInitializer<Model1>(new CreateDatabaseIfNotExists<Model1>());
         }
 
         public virtual DbSet<aDMIN_fORMULARIOS> aDMIN_fORMULARIOS { get; set; }
@@ -35,6 +36,7 @@ namespace PrintumCommerce.Models.Access
         public virtual DbSet<Pro_Envase> Pro_Envase { get; set; }
         public virtual DbSet<Pro_Grupos> Pro_Grupos { get; set; }
         public virtual DbSet<pRO_hsEG> pRO_hsEG { get; set; }
+        public virtual DbSet<pRO_hsEG_cOMPO> pRO_hsEG_cOMPO { get; set; }
         public virtual DbSet<Pro_Lineas> Pro_Lineas { get; set; }
         public virtual DbSet<pRO_lN> pRO_lN { get; set; }
         public virtual DbSet<Pro_MP_Pedidos> Pro_MP_Pedidos { get; set; }
@@ -189,6 +191,8 @@ namespace PrintumCommerce.Models.Access
                 .HasMany(e => e.CTZs)
                 .WithOptional(e => e.User)
                 .HasForeignKey(e => e.vENDOR);
+
+         
         }
     }
 }
