@@ -391,6 +391,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\JoYDaCreate.sql" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -490,20 +491,19 @@
     <Content Include="Views\Pro_Presentacion\Index.cshtml" />
     <Content Include="Views\Home\PDF.cshtml" />
     <Content Include="Views\Shared\_PdfLayout.cshtml" />
-    <Content Include="Views\pRO_hsEG\Create.cshtml" />
-    <Content Include="Views\pRO_hsEG\Delete.cshtml" />
-    <Content Include="Views\pRO_hsEG\Details.cshtml" />
-    <Content Include="Views\pRO_hsEG\Edit.cshtml" />
-    <Content Include="Views\pRO_hsEG\Index.cshtml" />
     <Content Include="Views\pRO_hsEG_cOMPO\Create.cshtml" />
     <Content Include="Views\pRO_hsEG_cOMPO\Delete.cshtml" />
     <Content Include="Views\pRO_hsEG_cOMPO\Details.cshtml" />
     <Content Include="Views\pRO_hsEG_cOMPO\Edit.cshtml" />
     <Content Include="Views\pRO_hsEG_cOMPO\Index.cshtml" />
+    <Content Include="Views\pRO_hsEG\Create.cshtml" />
+    <Content Include="Views\pRO_hsEG\Delete.cshtml" />
+    <Content Include="Views\pRO_hsEG\Details.cshtml" />
+    <Content Include="Views\pRO_hsEG\Edit.cshtml" />
+    <Content Include="Views\pRO_hsEG\Index.cshtml" />
     <Content Include="Views\pRO_hsEG\PDF.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\Golo\" />
