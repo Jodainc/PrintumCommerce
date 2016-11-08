@@ -37,6 +37,9 @@ namespace PrintumCommerce.Models.Access
         public virtual DbSet<Pro_Grupos> Pro_Grupos { get; set; }
         public virtual DbSet<pRO_hsEG> pRO_hsEG { get; set; }
         public virtual DbSet<pRO_hsEG_cOMPO> pRO_hsEG_cOMPO { get; set; }
+
+        public virtual DbSet<pRO_hsEG_ePP> pRO_hsEG_ePP { get; set; }
+        public virtual DbSet<pRO_hsEG_oTRAiNFO> pRO_hsEG_oTRAiNFO { get; set; }
         public virtual DbSet<Pro_Lineas> Pro_Lineas { get; set; }
         public virtual DbSet<pRO_lN> pRO_lN { get; set; }
         public virtual DbSet<Pro_MP_Pedidos> Pro_MP_Pedidos { get; set; }

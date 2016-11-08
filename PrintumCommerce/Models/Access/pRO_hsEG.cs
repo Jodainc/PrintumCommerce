@@ -178,5 +178,11 @@ namespace PrintumCommerce.Models.Access
         public virtual Producto Producto { get; set; }
         public virtual ICollection<pRO_hsEG_cOMPO> RO_hsEG_cOMPO { get; set; }
 
+        [Column("16Codigo")]
+        public virtual ICollection<pRO_hsEG_oTRAiNFO> c16Codigo { get; set; }
+
+        [Column("8Codigo")]
+        public virtual ICollection<pRO_hsEG_ePP> pRO_hsEG_ePP { get; set; }
+
     }
 }

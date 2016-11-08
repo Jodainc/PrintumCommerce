@@ -1,0 +1,119 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.tAUX_EPP>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.pOP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nOMBREhS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tPROTECCCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dETALLEePP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iNFOa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nORMAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uSO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cUIDADOSE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cONxrEMPLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.aLMACENAMIENTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lIMPIEZA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oBLIGApARA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rEVISION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IEPP)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.pOP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nOMBREhS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tPROTECCCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dETALLEePP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iNFOa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nORMAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uSO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cUIDADOSE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cONxrEMPLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.aLMACENAMIENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lIMPIEZA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.oBLIGApARA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rEVISION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IEPP)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.nO }) |
+                @Html.ActionLink("Details", "Details", new { id=item.nO }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.nO })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

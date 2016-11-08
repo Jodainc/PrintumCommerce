@@ -1,4 +1,4 @@
-﻿@model Tuple<List<PrintumCommerce.Models.Access.pRO_hsEG>, List<PrintumCommerce.Models.Access.pRO_hsEG_cOMPO>>
+﻿@model Tuple<List<PrintumCommerce.Models.Access.pRO_hsEG>, List<PrintumCommerce.Models.Access.pRO_hsEG_cOMPO>, List < PrintumCommerce.Models.Access.pRO_hsEG_ePP>, List<PrintumCommerce.Models.Access.pRO_hsEG_ePP>>
 
 @{
     Layout = "~/Views/Shared/_PdfLayout.cshtml";
@@ -355,7 +355,7 @@
 }
         </row>
     </table>
-@foreach (var item in Model.Item1)
+@foreach (var item in Model.Item4)
 {
     <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;15;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
@@ -376,17 +376,20 @@
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8cONTROLiNG)</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8cONTROLiNG)</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8cONTROLiNG)</chunk>
-            </cell>
+
         </row>
-    </table>
+                    <row background-color="#dddddd" align-content="center">
+                <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                    <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8pROTECCION)</chunk>
+                </cell>
+                    <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.c8ePP)</chunk>
+                    </cell>
+                <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                    <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.c8mASiNFO)</chunk>
+                </cell>
+            </row>
+</table>
 }
 @foreach (var item in Model.Item1)
 {

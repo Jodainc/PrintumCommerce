@@ -1,0 +1,64 @@
+﻿@model PrintumCommerce.Models.Access.pRO_hsEG_ePP
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>pRO_hsEG_ePP</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.C8Codigo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.C8Codigo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.C8pROTECCION)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.C8pROTECCION)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.c8ePP)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.c8ePP)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.c8mASiNFO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.c8mASiNFO)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -45,7 +45,65 @@ namespace PrintumCommerce.Controllers.ProHe
             }
             var pRO_hsEG = db.pRO_hsEG.Include(p => p.Producto).Where(p => p.Codigo == id);
             var pRO_hsEG_cOMPO = db.pRO_hsEG_cOMPO.Where(p => p.C2Codigo == id);
-            var allModels = new Tuple<List<pRO_hsEG>, List<pRO_hsEG_cOMPO>>(pRO_hsEG.ToList(), pRO_hsEG_cOMPO.ToList()){ };
+            var pRO_hsEG_ePP1 = db.pRO_hsEG_ePP.Where(p => p.C8Codigo == id);
+            var q = from r in db.pRO_hsEG_ePP
+                    where r.C8Codigo == id
+                    select new
+                    {
+                        C8Codigo = r.C8Codigo,
+                        c8epp = r.c8ePP,
+                        c8mASiNFO = r.c8mASiNFO,
+                        C8pROTECCION = r.C8pROTECCION
+                    };
+            List<pRO_hsEG_ePP> list10 = null;
+
+            foreach (var item1 in q)
+            {
+                if (!(item1.Equals(null)) || (string.IsNullOrEmpty(item1.c8epp)) || (string.IsNullOrEmpty(item1.C8Codigo)) || !(string.IsNullOrEmpty(item1.c8epp)))
+                {
+
+                int catgry = 0;
+                int a10 = 0;
+                string[] words = { };
+                char[] delimiterChars = { ' ', ';', '\t' };
+                words = item1.c8epp.Split(delimiterChars);
+                foreach (string s in words)
+                {
+                    if (!(String.IsNullOrEmpty(words[a10])))
+                    {
+                        catgry = Convert.ToInt32(words[a10]);
+                    } else
+                    {
+                        break;
+                    }
+
+                }
+                var q10 = from r in db.tAUX_EPP
+                          where r.nO == catgry
+                          select new
+                          {
+
+                              c8epp = r.nOMBREhS
+
+                          };
+               
+                var hj2 = from r in db.tAUX_EPP where r.nO == catgry select new { c8epp = r.nOMBREhS };
+                hj2.ToList();
+                list10 = q.AsEnumerable()
+                    .Select(o => new pRO_hsEG_ePP
+                    {
+                        C8Codigo = o.C8Codigo,
+                        c8ePP  =hj2.ToString(),
+                        c8mASiNFO = o.c8mASiNFO,
+                        C8pROTECCION = o.C8pROTECCION,
+                    }).ToList();
+
+        
+                a10++;
+                }
+                else { break; }
+            }
+            var allModels = new Tuple<List<pRO_hsEG>, List<pRO_hsEG_cOMPO>, List<pRO_hsEG_ePP>, List<pRO_hsEG_ePP>>(pRO_hsEG.ToList(), pRO_hsEG_cOMPO.ToList(), list10, list10) { };
             if (pRO_hsEG == null || pRO_hsEG_cOMPO == null)
             {
                 return HttpNotFound();
