@@ -46,6 +46,7 @@ namespace PrintumCommerce.Controllers.ProHe
             var pRO_hsEG = db.pRO_hsEG.Include(p => p.Producto).Where(p => p.Codigo == id);
             var pRO_hsEG_cOMPO = db.pRO_hsEG_cOMPO.Where(p => p.C2Codigo == id);
             var pRO_hsEG_ePP1 = db.pRO_hsEG_ePP.Where(p => p.C8Codigo == id);
+            var Pro12 = db.pRO_hsEG_oTRAiNFO.Where(p => p.c16Codigo == id);
             var q = from r in db.pRO_hsEG_ePP
                     where r.C8Codigo == id
                     select new
@@ -55,60 +56,146 @@ namespace PrintumCommerce.Controllers.ProHe
                         c8mASiNFO = r.c8mASiNFO,
                         C8pROTECCION = r.C8pROTECCION
                     };
-            List<pRO_hsEG_ePP> list10 = null;
 
-            foreach (var item1 in q)
+            int a11 = 0;
+            if (a11 == 0)
             {
-                if (!(item1.Equals(null)) || (string.IsNullOrEmpty(item1.c8epp)) || (string.IsNullOrEmpty(item1.C8Codigo)) || !(string.IsNullOrEmpty(item1.c8epp)))
-                {
-
-                int catgry = 0;
-                int a10 = 0;
-                string[] words = { };
-                char[] delimiterChars = { ' ', ';', '\t' };
-                words = item1.c8epp.Split(delimiterChars);
-                foreach (string s in words)
-                {
-                    if (!(String.IsNullOrEmpty(words[a10])))
+                List<pRO_hsEG_ePP> list10 = null;
+                List<tAUX_EPP> list11 = q.AsEnumerable()
+                    .Select(o => new tAUX_EPP
                     {
-                        catgry = Convert.ToInt32(words[a10]);
-                    } else
+                        nO = 0,
+                        lIMPIEZA = "",
+                        IEPP = "",
+                        dETALLEePP = "",
+                        aLMACENAMIENTO = "",
+                        cONxrEMPLA = "",
+                        cUIDADOSE = "",
+                        tPROTECCCION = "",
+                        uSO = "",
+                        nOMBREhS = ""
+
+                    }).ToList();
+                List<tAUX_EPP> list12 = q.AsEnumerable()
+                    .Select(o => new tAUX_EPP
                     {
-                        break;
-                    }
+                        nO = 0,
+                        lIMPIEZA = "",
+                        IEPP = "",
+                        dETALLEePP = "",
+                        aLMACENAMIENTO = "",
+                        cONxrEMPLA = "",
+                        cUIDADOSE = "",
+                        tPROTECCCION = "",
+                        uSO = "",
+                        nOMBREhS = ""
 
-                }
-                var q10 = from r in db.tAUX_EPP
-                          where r.nO == catgry
-                          select new
-                          {
-
-                              c8epp = r.nOMBREhS
-
-                          };
-               
-                var hj2 = from r in db.tAUX_EPP where r.nO == catgry select new { c8epp = r.nOMBREhS };
-                hj2.ToList();
-                list10 = q.AsEnumerable()
-                    .Select(o => new pRO_hsEG_ePP
-                    {
-                        C8Codigo = o.C8Codigo,
-                        c8ePP  =hj2.ToString(),
-                        c8mASiNFO = o.c8mASiNFO,
-                        C8pROTECCION = o.C8pROTECCION,
                     }).ToList();
 
-        
-                a10++;
+                foreach (var item1 in q)
+                {
+
+                    if (!(item1.Equals(null)) || !(string.IsNullOrEmpty(item1.c8epp)) || !(string.IsNullOrEmpty(item1.C8Codigo)) || !(string.IsNullOrEmpty(item1.c8epp)))
+                    {
+                        int catgry = 0;
+                        int a10 = 0;
+                        string[] words = { };
+                        char[] delimiterChars = { ' ', ';', '\t' };
+                        words = item1.c8epp.Split(delimiterChars);
+                        foreach (string s in words)
+                        {
+                            if (!(String.IsNullOrEmpty(words[a10])))
+                            {
+                                catgry = Convert.ToInt32(words[a10]);
+
+
+                                var q10 = from r in db.tAUX_EPP
+                                          where r.nO == catgry
+                                          select new
+                                          {
+                                              no = r.nO,
+                                              liem = r.lIMPIEZA,
+                                              iepp = r.IEPP,
+                                              deta = r.dETALLEePP,
+                                              almace = r.aLMACENAMIENTO,
+                                              conxre = r.cONxrEMPLA,
+                                              cuid = r.cUIDADOSE,
+                                              pr = r.tPROTECCCION,
+                                              us = r.uSO,
+                                              c8epp = r.nOMBREhS,
+                                              pop = r.pOP,
+                                              inf = r.iNFOa,
+                                              norm = r.nORMAT,
+                                              obliv = r.oBLIGApARA,
+                                              revp = r.rEVISION,
+                                          };
+
+                                if (a11 == 0)
+                                {
+                                    list12 = list11 = q10.AsEnumerable()
+                        .Select(o => new tAUX_EPP
+                        {
+                            nO = o.no,
+                            lIMPIEZA = o.liem,
+                            IEPP = o.iepp,
+                            dETALLEePP = o.deta,
+                            aLMACENAMIENTO = o.almace,
+                            cONxrEMPLA = o.conxre,
+                            cUIDADOSE = o.cuid,
+                            tPROTECCCION = o.pr,
+                            uSO = o.us,
+                            nOMBREhS = o.c8epp
+
+                        }).ToList();
+
+                                    a11++;
+                                }
+                                else
+                                {
+                                    list12.AddRange(list11 = q10.AsEnumerable()
+                           .Select(o => new tAUX_EPP
+                           {
+                               nO = o.no,
+                               lIMPIEZA = o.liem,
+                               IEPP = o.iepp,
+                               dETALLEePP = o.deta,
+                               aLMACENAMIENTO = o.almace,
+                               cONxrEMPLA = o.conxre,
+                               cUIDADOSE = o.cuid,
+                               tPROTECCCION = o.pr,
+                               uSO = o.us,
+                               nOMBREhS = o.c8epp,
+                               pOP = o.pop,
+                               iNFOa = o.inf,
+                               nORMAT = o.norm,
+                               oBLIGApARA = o.obliv,
+                               rEVISION = o.revp
+                           }).ToList());
+                                }
+
+
+                                a10++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                        }
+
+                    }
+                    else { break; }
                 }
-                else { break; }
-            }
-            var allModels = new Tuple<List<pRO_hsEG>, List<pRO_hsEG_cOMPO>, List<pRO_hsEG_ePP>, List<pRO_hsEG_ePP>>(pRO_hsEG.ToList(), pRO_hsEG_cOMPO.ToList(), list10, list10) { };
+ 
+            var allModels = new Tuple<List<pRO_hsEG>, List<pRO_hsEG_cOMPO>, List<pRO_hsEG_ePP>, List<tAUX_EPP>,List<pRO_hsEG_oTRAiNFO>> (pRO_hsEG.ToList(), pRO_hsEG_cOMPO.ToList(), pRO_hsEG_ePP1.ToList(), list12,Pro12.ToList()) { };
+    
             if (pRO_hsEG == null || pRO_hsEG_cOMPO == null)
             {
                 return HttpNotFound();
             }
             return new PdfResult(allModels, "PDF");
+            }
+            return new PdfResult(null, "PDF");
         }
 
         // GET: pRO_hsEG/Create
