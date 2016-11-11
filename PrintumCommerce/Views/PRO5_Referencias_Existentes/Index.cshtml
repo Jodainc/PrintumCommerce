@@ -1,0 +1,82 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.PRO5_Referencias_Existentes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Off_Tipogra_UV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Off_Tipogra_Aceite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flx_UV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flx_AGUA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flx_SOVENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SRC_UV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SRC_AGUA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRO1_Productos.COD_PRODUCTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Off_Tipogra_UV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Off_Tipogra_Aceite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flx_UV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flx_AGUA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flx_SOVENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SRC_UV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SRC_AGUA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCode })
+        </td>
+    </tr>
+}
+
+</table>

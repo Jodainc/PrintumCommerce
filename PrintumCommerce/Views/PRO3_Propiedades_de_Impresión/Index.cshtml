@@ -1,0 +1,118 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.PRO3_Propiedades_de_Impresión>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_máquina_Imprimibilidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_máquina_Secado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_máquina_Limpieza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Brillo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_al_Roce_en_Húmedo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_al_Roce_en_Seco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_a_Químicos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_a_la_Luz___Amarillamiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_al_Calor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.En_Seco_Nivelación)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Procesamiento_Estampado_al_Calor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Procesamiento_Pegabilidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Procesamiento_Transferencia_Térmica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Procesamiento_Impresión_Láser)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRO1_Productos.COD_PRODUCTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_máquina_Imprimibilidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_máquina_Secado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_máquina_Limpieza)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Brillo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Resistencia_al_Roce_en_Húmedo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Resistencia_al_Roce_en_Seco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Resistencia_a_Químicos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Resistencia_a_la_Luz___Amarillamiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Resistencia_al_Calor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.En_Seco_Nivelación)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Procesamiento_Estampado_al_Calor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Procesamiento_Pegabilidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Procesamiento_Transferencia_Térmica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Procesamiento_Impresión_Láser)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCode })
+        </td>
+    </tr>
+}
+
+</table>

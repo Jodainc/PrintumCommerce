@@ -17,7 +17,8 @@ namespace PrintumCommerce.Controllers.ProHe
         // GET: pRO_hsEG_oTRAiNFO
         public ActionResult Index()
         {
-            return View(db.pRO_hsEG_oTRAiNFO.ToList());
+            var pRO_hsEG_oTRAiNFO = db.pRO_hsEG_oTRAiNFO.Include(p => p.pRO_hsEG);
+            return View(pRO_hsEG_oTRAiNFO.ToList());
         }
 
         // GET: pRO_hsEG_oTRAiNFO/Details/5
@@ -38,6 +39,7 @@ namespace PrintumCommerce.Controllers.ProHe
         // GET: pRO_hsEG_oTRAiNFO/Create
         public ActionResult Create()
         {
+            ViewBag.C16Codigo = new SelectList(db.pRO_hsEG, "Codigo", "C1nOMBRE");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace PrintumCommerce.Controllers.ProHe
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idCode,c16Codigo,c16iNFO")] pRO_hsEG_oTRAiNFO pRO_hsEG_oTRAiNFO)
+        public ActionResult Create([Bind(Include = "idCode,C16Codigo,C16iNFO")] pRO_hsEG_oTRAiNFO pRO_hsEG_oTRAiNFO)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace PrintumCommerce.Controllers.ProHe
                 return RedirectToAction("Index");
             }
 
+            ViewBag.C16Codigo = new SelectList(db.pRO_hsEG, "Codigo", "C1nOMBRE", pRO_hsEG_oTRAiNFO.C16Codigo);
             return View(pRO_hsEG_oTRAiNFO);
         }
 
@@ -70,6 +73,7 @@ namespace PrintumCommerce.Controllers.ProHe
             {
                 return HttpNotFound();
             }
+            ViewBag.C16Codigo = new SelectList(db.pRO_hsEG, "Codigo", "C1nOMBRE", pRO_hsEG_oTRAiNFO.C16Codigo);
             return View(pRO_hsEG_oTRAiNFO);
         }
 
@@ -78,7 +82,7 @@ namespace PrintumCommerce.Controllers.ProHe
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idCode,c16Codigo,c16iNFO")] pRO_hsEG_oTRAiNFO pRO_hsEG_oTRAiNFO)
+        public ActionResult Edit([Bind(Include = "idCode,C16Codigo,C16iNFO")] pRO_hsEG_oTRAiNFO pRO_hsEG_oTRAiNFO)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace PrintumCommerce.Controllers.ProHe
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.C16Codigo = new SelectList(db.pRO_hsEG, "Codigo", "C1nOMBRE", pRO_hsEG_oTRAiNFO.C16Codigo);
             return View(pRO_hsEG_oTRAiNFO);
         }
 

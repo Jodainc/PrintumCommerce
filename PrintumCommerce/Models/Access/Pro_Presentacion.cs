@@ -11,7 +11,14 @@ namespace PrintumCommerce.Models.Access
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pro_Presentacion()
         {
+            C2016vENTAS = new HashSet<C2016vENTAS>();
+            CTZ_D = new HashSet<CTZ_D>();
+            iMPORTACIONES_D = new HashSet<iMPORTACIONES_D>();
             Pedidos_Productos = new HashSet<Pedidos_Productos>();
+            Pro_Existencias = new HashSet<Pro_Existencias>();
+            PRO_OC_D = new HashSet<PRO_OC_D>();
+            pRODUCTOS_cLASS = new HashSet<pRODUCTOS_cLASS>();
+            Proveedores_Productos = new HashSet<Proveedores_Productos>();
         }
 
         [StringLength(255)]
@@ -75,10 +82,31 @@ namespace PrintumCommerce.Models.Access
         public string R_NFPA4 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<C2016vENTAS> C2016vENTAS { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTZ_D> CTZ_D { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<iMPORTACIONES_D> iMPORTACIONES_D { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedidos_Productos> Pedidos_Productos { get; set; }
 
-        public virtual Producto Producto { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pro_Existencias> Pro_Existencias { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRO_OC_D> PRO_OC_D { get; set; }
+
+        public virtual Productos Productos { get; set; }
 
         public virtual Pro_Tiempo Pro_Tiempo { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<pRODUCTOS_cLASS> pRODUCTOS_cLASS { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Proveedores_Productos> Proveedores_Productos { get; set; }
     }
 }

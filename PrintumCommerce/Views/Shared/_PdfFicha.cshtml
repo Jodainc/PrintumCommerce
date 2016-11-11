@@ -1,0 +1,51 @@
+﻿<itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+
+
+    <table width="100%" cellpadding="1.0" cellspacing="1.0" backgroundcolor="#dd2d27" widths="12;12;12" borderwidth="0" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+        <row background-color="#dddddd" align-content="center">
+
+            <cell borderwidth="0" vertical-align="top" left="false" right="false" top="false" bottom="true"></cell>
+            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:20;font-weight:bold;align-content:center; " color="white">Printum SAS</chunk>
+            </cell>
+            <cell borderwidth="0" width="25%" left="false" right="false" top="false" bottom="true"></cell>
+
+        </row>
+        <row background-color="#dddddd" borderwidth="0">
+            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:16;font-weight:bold;align-content:center; " color="white">fICHA tECNICA</chunk>
+            </cell>
+            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <image height="50px" width="20%" url="@Context.Server.MapPath("~/Content/images/pRiNtUmICOHse.png")" />
+
+            </cell>
+            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">Especialistas en tecnología ultravioleta</chunk>
+            </cell>
+        </row>
+    </table>
+
+
+    @RenderBody()
+
+    <table width="100%" cellpadding="1.0" cellspacing="1.0" backgroundcolor="#dd2d27" widths="12;12;12" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+        <row background-color="#dddddd" align-content="center">
+            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true">
+                <image url="@Context.Server.MapPath("~/Content/images/pRiNtUmICOHse.png")" />
+            </cell>
+        </row>
+        <row background-color="#dddddd" align-content="right">
+            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" align="right">
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">PBX: (57+1) 8985152</chunk>
+            </cell>
+        </row>
+        <row background-color="#dddddd" align-content="right">
+            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" align="right">
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">WWW.PRINTUM-UV.COM</chunk>
+            </cell>
+        </row>
+    </table>
+
+
+    <newline />
+</itext>

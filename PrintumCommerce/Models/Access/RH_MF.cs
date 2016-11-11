@@ -11,7 +11,19 @@ namespace PrintumCommerce.Models.Access
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RH_MF()
         {
+            RH_CONTRA_Aumentos_SB = new HashSet<RH_CONTRA_Aumentos_SB>();
             RH_Contratos = new HashSet<RH_Contratos>();
+            RH_MF_DF = new HashSet<RH_MF_DF>();
+            RH_MF_EER = new HashSet<RH_MF_EER>();
+            RH_MF_HE_FC = new HashSet<RH_MF_HE_FC>();
+            RH_MF_HE_HE = new HashSet<RH_MF_HE_HE>();
+            RH_MF_HE_IM = new HashSet<RH_MF_HE_IM>();
+            RH_MF_IND = new HashSet<RH_MF_IND>();
+            RH_MF_PP = new HashSet<RH_MF_PP>();
+            RH_MF_RC_EX = new HashSet<RH_MF_RC_EX>();
+            RH_MF_RC_FA = new HashSet<RH_MF_RC_FA>();
+            RH_MF_RC = new HashSet<RH_MF_RC>();
+            RH_MF_RC_RH = new HashSet<RH_MF_RC_RH>();
         }
 
         [Key]
@@ -139,6 +151,42 @@ namespace PrintumCommerce.Models.Access
         public string hABILIDADESfISICAS { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_CONTRA_Aumentos_SB> RH_CONTRA_Aumentos_SB { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RH_Contratos> RH_Contratos { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_DF> RH_MF_DF { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_EER> RH_MF_EER { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_HE_FC> RH_MF_HE_FC { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_HE_HE> RH_MF_HE_HE { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_HE_IM> RH_MF_HE_IM { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_IND> RH_MF_IND { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_PP> RH_MF_PP { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_RC_EX> RH_MF_RC_EX { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_RC_FA> RH_MF_RC_FA { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_RC> RH_MF_RC { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_MF_RC_RH> RH_MF_RC_RH { get; set; }
     }
 }

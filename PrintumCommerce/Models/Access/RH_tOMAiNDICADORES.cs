@@ -8,6 +8,12 @@ namespace PrintumCommerce.Models.Access
 
     public partial class RH_tOMAiNDICADORES
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public RH_tOMAiNDICADORES()
+        {
+            RH_tOMAiNDICADORES_D = new HashSet<RH_tOMAiNDICADORES_D>();
+        }
+
         [Key]
         [StringLength(255)]
         public string cOD { get; set; }
@@ -27,6 +33,12 @@ namespace PrintumCommerce.Models.Access
         [StringLength(255)]
         public string nOcONTRATO { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int idCode { get; set; }
+
         public virtual RH_EmpleadosPRTN RH_EmpleadosPRTN { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_tOMAiNDICADORES_D> RH_tOMAiNDICADORES_D { get; set; }
     }
 }

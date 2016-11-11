@@ -8,6 +8,13 @@ namespace PrintumCommerce.Models.Access
 
     public partial class pRO_hsEG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public pRO_hsEG()
+        {
+            pRO_hsEG_ePP = new HashSet<pRO_hsEG_ePP>();
+            pRO_hsEG_oTRAiNFO = new HashSet<pRO_hsEG_oTRAiNFO>();
+        }
+
         [Key]
         [StringLength(255)]
         public string Codigo { get; set; }
@@ -175,14 +182,13 @@ namespace PrintumCommerce.Models.Access
 
         [Column("16pICT2", TypeName = "ntext")]
         public string C16pICT2 { get; set; }
-        public virtual Producto Producto { get; set; }
-        public virtual ICollection<pRO_hsEG_cOMPO> RO_hsEG_cOMPO { get; set; }
 
-        [Column("16Codigo")]
-        public virtual ICollection<pRO_hsEG_oTRAiNFO> c16Codigo { get; set; }
-
-        [Column("8Codigo")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<pRO_hsEG_ePP> pRO_hsEG_ePP { get; set; }
 
+        public virtual Productos Productos { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<pRO_hsEG_oTRAiNFO> pRO_hsEG_oTRAiNFO { get; set; }
     }
 }

@@ -1,64 +1,65 @@
 ﻿@model PrintumCommerce.Models.Access.pRO_hsEG_cOMPO
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Delete</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
-</head>
-<body>
-    <h3>Are you sure you want to delete this?</h3>
-    <div>
-        <h4>pRO_hsEG_cOMPO</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.C2Codigo)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.C2Codigo)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.C2cOMPONENTE)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.C2cOMPONENTE)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.C2pORCEN)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.C2pORCEN)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.C2nOcAS)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.C2nOcAS)
-            </dd>
-    
-        </dl>
-    
-        @using (Html.BeginForm()) {
-            @Html.AntiForgeryToken()
-    
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
-            </div>
-        }
-    </div>
-</body>
-</html>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>pRO_hsEG_cOMPO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.C2Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2cOMPONENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2cOMPONENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2pORCEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2pORCEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2nOcAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2nOcAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_hsEG_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_hsEG_Codigo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

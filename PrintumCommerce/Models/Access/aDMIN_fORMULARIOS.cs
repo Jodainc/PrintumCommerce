@@ -8,6 +8,12 @@ namespace PrintumCommerce.Models.Access
 
     public partial class aDMIN_fORMULARIOS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public aDMIN_fORMULARIOS()
+        {
+            uSER_pERMIS = new HashSet<uSER_pERMIS>();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int cOD { get; set; }
@@ -16,5 +22,8 @@ namespace PrintumCommerce.Models.Access
         public string fORMUL { get; set; }
 
         public int? sECTOR { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<uSER_pERMIS> uSER_pERMIS { get; set; }
     }
 }

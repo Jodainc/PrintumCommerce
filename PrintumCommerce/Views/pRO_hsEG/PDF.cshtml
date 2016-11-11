@@ -1,13 +1,7 @@
-﻿@model Tuple<List<PrintumCommerce.Models.Access.pRO_hsEG>, List<PrintumCommerce.Models.Access.pRO_hsEG_cOMPO>, List < PrintumCommerce.Models.Access.pRO_hsEG_ePP>, List<PrintumCommerce.Models.Access.tAUX_EPP>>
-
+﻿@model Tuple<List<PrintumCommerce.Models.Access.pRO_hsEG>, List<PrintumCommerce.Models.Access.pRO_hsEG_cOMPO>, List<PrintumCommerce.Models.Access.pRO_hsEG_ePP>, List<PrintumCommerce.Models.Access.tAUX_EPP>>
 @{
     Layout = "~/Views/Shared/_PdfLayout.cshtml";
 }
-
-<paragraph style="font-family:Helvetica;font-size:18;font-style:italic;">
-    <chunk red="255" green="0" blue="0"> </chunk>
-</paragraph>
-
 @foreach (var item in Model.Item1)
 {
     <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="10;8;20;10" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
@@ -93,21 +87,21 @@
         </cell>
 
     </row>
-@foreach (var item in Model.Item2)
-{
-    <row background-color="#dddddd" borderwidth="0">
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C2cOMPONENTE)</chunk>
-        </cell>
-        <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C2pORCEN)</chunk>
-        </cell>
-        <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white"> @Html.DisplayFor(modelItem => item.C2nOcAS) </chunk>
-        </cell>
+    @foreach (var item in Model.Item2)
+    {
+        <row background-color="#dddddd" borderwidth="0">
+            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C2cOMPONENTE)</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C2pORCEN)</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white"> @Html.DisplayFor(modelItem => item.C2nOcAS) </chunk>
+            </cell>
 
-    </row>
-}
+        </row>
+    }
 </table>
 @foreach (var item in Model.Item1)
 {
@@ -337,24 +331,24 @@
         </row>
     </table>}
 
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
-        <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Controles de Exposición/Proteccion Personal</chunk></cell>
-        </row>
-        <row background-color="#dddddd" align-content="center">
+<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
+        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
+        <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Controles de Exposición/Proteccion Personal</chunk></cell>
+    </row>
+    <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">cONTROLES DE INGENIERÍA</chunk>
-            </cell>
-@foreach (var item in Model.Item1)
-{
+        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+            <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">cONTROLES DE INGENIERÍA</chunk>
+        </cell>
+        @foreach (var item in Model.Item1)
+        {
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8cONTROLiNG)</chunk>
             </cell>
-}
-        </row>
-    </table>
+        }
+    </row>
+</table>
 @{
     int a60 = 0;
     int fi = 1;
@@ -364,159 +358,159 @@
         if (item.C8pROTECCION != null)
         {
 
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;15;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
-        <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">  Equipo Tecnico </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left">- Hojas de Seguridad -  </chunk></cell>
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> Proteccion Personal</chunk> </cell>
-        </row>
-        <row background-color="#dddddd" align-content="center">
+            <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;15;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+                <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">  Equipo Tecnico </chunk> </cell>
+                    <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left">- Hojas de Seguridad -  </chunk></cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> Proteccion Personal</chunk> </cell>
+                </row>
+                <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pROTECCIÓN</chunk>
-            </cell>
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">ePP</chunk>
-            </cell>
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">mASINFO</chunk>
-            </cell>
-        </row>
-    <row background-color="#dddddd" align-content="center">
-    <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8pROTECCION)</chunk>
-    </cell>
-        @{
-            int a99 = 0;
-            int fe = 1;
-            int a10 = 0;
-            int a11 = 0;
-            String[] words1 = new string[10];
-            string[] words2 = new string[10];
-            string[] Letter = new string[10];
-            string[] Letter6 = new string[10];
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pROTECCIÓN</chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">ePP</chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">mASINFO</chunk>
+                    </cell>
+                </row>
+                <row background-color="#dddddd" align-content="center">
+                    <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8pROTECCION)</chunk>
+                    </cell>
+                    @{
+                        int a99 = 0;
+                        int fe = 1;
+                        int a10 = 0;
+                        int a11 = 0;
+                        String[] words1 = new string[10];
+                        string[] words2 = new string[10];
+                        string[] Letter = new string[10];
+                        string[] Letter6 = new string[10];
 
-            int[] cuenta = new int[40];
-            foreach (var item19 in Model.Item4)
-            {
-                char[] delimiterChars = { ' ', ';', '\t' };
-                words1 = item.c8ePP.Split(delimiterChars);
-
-            }
-            foreach (var item21 in Model.Item4)
-            {
-
-                cuenta[a11] = item21.nO;
-                words2[a11] = cuenta[a11].ToString();
-                a11++;
-            }
-            foreach (var item1 in Model.Item4)
-            {
-                int catgry = 0;
-                string[] words = { };
-                char[] delimiterChars = { ' ', ';', '\t' };
-                words = item.c8ePP.Split(delimiterChars);
-
-                if (words.Length > 1)
-                {
-                    bool Exis = false;
-                    int entra = 0;
-                    string[] Letter4 = new string[10];
-
-                    foreach (var item10 in Model.Item4)
-                    {
-                        int pos = Array.IndexOf(Letter, item10.nOMBREhS);
-
-                        if (Array.IndexOf(words2, words1[a10]) > -1 && !(pos > -1))
+                        int[] cuenta = new int[40];
+                        foreach (var item19 in Model.Item4)
                         {
-                            Letter[a100] = item10.nOMBREhS;
-                            Letter4[a100] = item10.nOMBREhS;
-                            a100++;
+                            char[] delimiterChars = { ' ', ';', '\t' };
+                            words1 = item.C8ePP.Split(delimiterChars);
+
                         }
-                        if (a10 < words1.Length - 1 )
+                        foreach (var item21 in Model.Item4)
                         {
-                            a10++;
+
+                            cuenta[a11] = item21.nO;
+                            words2[a11] = cuenta[a11].ToString();
+                            a11++;
                         }
-                        else
+                        foreach (var item1 in Model.Item4)
                         {
-                            a10 = 0;
-                        }
-                    }
-                    if (fi != a60)
-                    {
-                    <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">
- 
-                                @if (fi != a60)
+                            int catgry = 0;
+                            string[] words = { };
+                            char[] delimiterChars = { ' ', ';', '\t' };
+                            words = item.C8ePP.Split(delimiterChars);
+
+                            if (words.Length > 1)
+                            {
+                                bool Exis = false;
+                                int entra = 0;
+                                string[] Letter4 = new string[10];
+
+                                foreach (var item10 in Model.Item4)
+                                {
+                                    int pos = Array.IndexOf(Letter, item10.nOMBREhS);
+
+                                    if (Array.IndexOf(words2, words1[a10]) > -1 && !(pos > -1))
+                                    {
+                                        Letter[a100] = item10.nOMBREhS;
+                                        Letter4[a100] = item10.nOMBREhS;
+                                        a100++;
+                                    }
+                                    if (a10 < words1.Length - 1)
+                                    {
+                                        a10++;
+                                    }
+                                    else
+                                    {
+                                        a10 = 0;
+                                    }
+                                }
+                                if (fi != a60)
+                                {
+                                    <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">
+
+                                            @if (fi != a60)
                                 {
                                     foreach (var item10 in Letter4)
                                     {
                                         if (!(String.IsNullOrEmpty(item10)) && (a60 != fi))
                                         {
-                                            @Html.DisplayFor(modelItem => item10)
+                                                        @Html.DisplayFor(modelItem => item10)
 
-                                            fi++;
+                                                        fi++;
+                                                    }
+                                                    @Html.Raw(" ")
+                                                }
+                                            }
+
+                                        </chunk>
+                                    </cell>
+                                }
+                                fi = a60;
+                            }
+                            else
+                            {
+
+                                if (!(String.IsNullOrEmpty(words[a10])))
+                                {
+                                    catgry = Convert.ToInt32(words[a10]);
+                                    if (item1.nO == catgry)
+                                    {
+                                        int pos = Array.IndexOf(Letter, item1.nOMBREhS);
+                                        if (!(pos > -1))
+                                        {
+                                            Letter[a100] = item1.nOMBREhS;
+                                            Letter6[a100] = item1.nOMBREhS;
+                                            a100++;
                                         }
-                                        @Html.Raw(" ")
                                     }
                                 }
-                   
-                        </chunk>
-                    </cell>
-                    }
-                    fi = a60;
-                }
-                else
-                {
-
-                    if (!(String.IsNullOrEmpty(words[a10])))
-                    {
-                        catgry = Convert.ToInt32(words[a10]);
-                        if (item1.nO == catgry)
+                            }
+                        }
+                        if (fe != a99)
                         {
-                            int pos = Array.IndexOf(Letter, item1.nOMBREhS);
-                            if (!(pos > -1))
-                            {
-                                Letter[a100] = item1.nOMBREhS;
-                                Letter6[a100] = item1.nOMBREhS;
-                                a100++;
-                            }
+                            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">
+                                    @if (fe != a99)
+                                    {
+                                        foreach (var item10 in Letter6)
+                                        {
+                                            if (!(String.IsNullOrEmpty(item10)))
+                                            {
+                                                @Html.DisplayFor(modelItem => item10)
+                                                fe++;
+                                            }
+                                            @Html.Raw(" ")
+                                        }
+                                    }
+                                </chunk>
+                            </cell>
+                            fe = a99;
+
                         }
                     }
-                }
-            }
-            if (fe != a99)
-            {
-            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">
-                    @if (fe != a99)
-                    {
-                    foreach (var item10 in Letter6)
-                    {
-                                if (!(String.IsNullOrEmpty(item10)))
-                                {
-                                    @Html.DisplayFor(modelItem => item10)
-                                    fe++;
-                                }
-                                @Html.Raw(" ")
-                        }
-                    }
-                </chunk>
-            </cell>
-            fe = a99;
 
-                }
-        }
+                    <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8mASiNFO)</chunk>
+                    </cell>
+                </row>
 
-        <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.c8mASiNFO)</chunk>
-        </cell>
-    </row>
+            </table>
 
-</table>
-
-                                }
                             }
+                        }
 }
 
 
@@ -554,7 +548,7 @@
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9gRAVEDAD)</chunk>
             </cell>
-            
+
         </row>
         <row background-color="#dddddd" align-content="center">
 
@@ -613,45 +607,46 @@
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9sOLUBILIDAD)</chunk>
             </cell>
 
-</row>
+        </row>
     </table>
 }
 @{
     string a = "";
     foreach (var item in Model.Item1)
     {
-<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
-    <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-        <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Propiedades físicas y quimicas</chunk></cell>
-    </row>
-    <row background-color="#dddddd" align-content="center">
-        @{
-            if (!(String.IsNullOrEmpty(item.C16pICT1)))
-            {
-                <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                    <image height="50px" width="20%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.C16pICT1))" />
-                </cell>
-            }
-            if (!(String.IsNullOrEmpty(item.C16nFPA)))
-            {
-                <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                    <image height="50px" width="20%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.C16nFPA))" />
-                </cell>
-            }
-            if (!(String.IsNullOrEmpty(item.C16pICT2)))
-            {
-            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <image height="50px" width="20%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.C16pICT2))" />
-            </cell>
-            }
+        <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="5;5;5" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+            <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
+                <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
+                <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Propiedades físicas y quimicas</chunk></cell>
+                <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
+             </row>
+            <row background-color="#dddddd" align-content="center">
+                @{
+                    if (!(String.IsNullOrEmpty(item.C16pICT1)))
+                    {
+                        <cell borderwidth="0" width="15%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                            <image height="10px" width="10%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.C16pICT1))" />
+                        </cell>
+                    }
+                    if (!(String.IsNullOrEmpty(item.C16nFPA)))
+                    {
+                        <cell borderwidth="0" width="15%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                            <image height="10px" width="10%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.C16nFPA))" />
+                        </cell>
+                    }
+                    if (!(String.IsNullOrEmpty(item.C16pICT2)))
+                    {
+                        <cell borderwidth="0" width="15%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                            <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.C16pICT2))" />
+                        </cell>
+                    }
 
-        }
-    </row>
-</table>
-        }
-    }
-    @foreach (var item in Model.Item1)
+                }
+            </row>
+        </table>
+                    }
+}
+@foreach (var item in Model.Item1)
 {
     <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">

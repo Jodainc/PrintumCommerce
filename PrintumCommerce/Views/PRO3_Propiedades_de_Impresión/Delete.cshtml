@@ -1,0 +1,145 @@
+﻿@model PrintumCommerce.Models.Access.PRO3_Propiedades_de_Impresión
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PRO3_Propiedades_de_Impresión</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_máquina_Imprimibilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_máquina_Imprimibilidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_máquina_Secado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_máquina_Secado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_máquina_Limpieza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_máquina_Limpieza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Brillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Brillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_al_Roce_en_Húmedo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Resistencia_al_Roce_en_Húmedo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_al_Roce_en_Seco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Resistencia_al_Roce_en_Seco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_a_Químicos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Resistencia_a_Químicos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_a_la_Luz___Amarillamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Resistencia_a_la_Luz___Amarillamiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Resistencia_al_Calor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Resistencia_al_Calor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.En_Seco_Nivelación)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.En_Seco_Nivelación)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Procesamiento_Estampado_al_Calor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Procesamiento_Estampado_al_Calor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Procesamiento_Pegabilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Procesamiento_Pegabilidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Procesamiento_Transferencia_Térmica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Procesamiento_Transferencia_Térmica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Procesamiento_Impresión_Láser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Procesamiento_Impresión_Láser)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

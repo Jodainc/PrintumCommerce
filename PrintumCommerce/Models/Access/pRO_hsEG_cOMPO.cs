@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
-
 namespace PrintumCommerce.Models.Access
 {
-    public class pRO_hsEG_cOMPO
-    {
-        [Key]
-        [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int idCode { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-        [Column("2Codigo ")]
+    public partial class pRO_hsEG_cOMPO
+    {
+        [Column("2Codigo")]
+        [StringLength(255)]
         public string C2Codigo { get; set; }
 
-        [Column("2cOMPONENTE", TypeName = "ntext")]
+        [Column("2cOMPONENTE")]
+        [StringLength(255)]
         public string C2cOMPONENTE { get; set; }
 
         [Column("2pORCEN")]
@@ -24,8 +22,10 @@ namespace PrintumCommerce.Models.Access
         [Column("2nOcAS")]
         public string C2nOcAS { get; set; }
 
-        public virtual pRO_hsEG pro_hsEG { set; get; }
+        [StringLength(255)]
+        public string pro_hsEG_Codigo { get; set; }
 
-
+        [Key]
+        public int idCode { get; set; }
     }
 }

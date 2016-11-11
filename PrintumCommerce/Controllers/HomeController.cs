@@ -26,10 +26,10 @@ namespace PrintumCommerce.Controllers
                 return a;
                //return View(users.ToList());
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 return null;
-                ModelState.AddModelError(string.Empty, "Error pdf");
+                //ModelState.AddModelError(string.Empty, "Error pdf");
 
             }
       

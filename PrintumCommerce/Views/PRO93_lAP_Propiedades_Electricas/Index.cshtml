@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.PRO93_lAP_Propiedades_Electricas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Info)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medicion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRO1_Productos.COD_PRODUCTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Info)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medicion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCode })
+        </td>
+    </tr>
+}
+
+</table>

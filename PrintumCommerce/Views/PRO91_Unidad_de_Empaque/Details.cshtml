@@ -1,0 +1,35 @@
+﻿@model PrintumCommerce.Models.Access.PRO91_Unidad_de_Empaque
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRO91_Unidad_de_Empaque</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Informacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Informacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

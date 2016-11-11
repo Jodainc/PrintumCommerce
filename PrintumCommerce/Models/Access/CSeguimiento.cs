@@ -23,11 +23,8 @@ namespace PrintumCommerce.Models.Access
         public string Estado { get; set; }
 
         [Key]
-        [Column(Order = 0)]
         public int no { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
         public bool Adjuntar { get; set; }
 
         [Column(TypeName = "ntext")]

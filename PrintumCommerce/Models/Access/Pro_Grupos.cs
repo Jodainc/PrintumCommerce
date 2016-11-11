@@ -11,7 +11,7 @@ namespace PrintumCommerce.Models.Access
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pro_Grupos()
         {
-            Productos = new HashSet<Producto>();
+            Productos = new HashSet<Productos>();
         }
 
         public double? Linea { get; set; }
@@ -30,6 +30,6 @@ namespace PrintumCommerce.Models.Access
         public virtual VT_Vlr_Liq VT_Vlr_Liq { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Producto> Productos { get; set; }
+        public virtual ICollection<Productos> Productos { get; set; }
     }
 }

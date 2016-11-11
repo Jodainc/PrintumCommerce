@@ -46,7 +46,7 @@ namespace PrintumCommerce.Controllers.ProHe
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idCode,C2Codigo,C2cOMPONENTE,C2pORCEN,C2nOcAS")] pRO_hsEG_cOMPO pRO_hsEG_cOMPO)
+        public ActionResult Create([Bind(Include = "idCode,C2Codigo,C2cOMPONENTE,C2pORCEN,C2nOcAS,pro_hsEG_Codigo")] pRO_hsEG_cOMPO pRO_hsEG_cOMPO)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace PrintumCommerce.Controllers.ProHe
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idCode,C2Codigo,C2cOMPONENTE,C2pORCEN,C2nOcAS")] pRO_hsEG_cOMPO pRO_hsEG_cOMPO)
+        public ActionResult Edit([Bind(Include = "idCode,C2Codigo,C2cOMPONENTE,C2pORCEN,C2nOcAS,pro_hsEG_Codigo")] pRO_hsEG_cOMPO pRO_hsEG_cOMPO)
         {
             if (ModelState.IsValid)
             {

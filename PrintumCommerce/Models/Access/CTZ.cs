@@ -9,6 +9,12 @@ namespace PrintumCommerce.Models.Access
     [Table("CTZ")]
     public partial class CTZ
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CTZ()
+        {
+            CTZ_D = new HashSet<CTZ_D>();
+        }
+
         [Key]
         public int nO_CTZ { get; set; }
 
@@ -28,6 +34,9 @@ namespace PrintumCommerce.Models.Access
         public int? tEP { get; set; }
 
         public int? vOF { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTZ_D> CTZ_D { get; set; }
 
         public virtual User User { get; set; }
     }

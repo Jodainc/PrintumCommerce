@@ -8,6 +8,12 @@ namespace PrintumCommerce.Models.Access
 
     public partial class RH_eVALUACIONES
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public RH_eVALUACIONES()
+        {
+            RH_eVALUACIONES_D = new HashSet<RH_eVALUACIONES_D>();
+        }
+
         [Key]
         [StringLength(255)]
         public string cOD { get; set; }
@@ -26,5 +32,8 @@ namespace PrintumCommerce.Models.Access
 
         [StringLength(255)]
         public string nOcONTRATO { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RH_eVALUACIONES_D> RH_eVALUACIONES_D { get; set; }
     }
 }

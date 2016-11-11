@@ -1,0 +1,67 @@
+﻿@model PrintumCommerce.Models.Access.PRO1_Productos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRO1_Productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Productos.Descripción)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productos.Descripción)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_Linea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cod_Linea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_Grupo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cod_Grupo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Cod_pro }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

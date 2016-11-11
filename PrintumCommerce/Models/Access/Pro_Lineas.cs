@@ -11,6 +11,7 @@ namespace PrintumCommerce.Models.Access
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pro_Lineas()
         {
+            cLI_lINExvENDOR = new HashSet<cLI_lINExvENDOR>();
             Pro_Grupos = new HashSet<Pro_Grupos>();
         }
 
@@ -21,6 +22,9 @@ namespace PrintumCommerce.Models.Access
 
         [StringLength(255)]
         public string Descripcion { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<cLI_lINExvENDOR> cLI_lINExvENDOR { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pro_Grupos> Pro_Grupos { get; set; }

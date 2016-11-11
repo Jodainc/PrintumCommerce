@@ -87,7 +87,7 @@ namespace PrintumCommerce.Models.Access
         [Column(TypeName = "ntext")]
         public string sOPORoP { get; set; }
 
-        public virtual Pedido Pedido { get; set; }
+        public virtual Pedidos Pedidos { get; set; }
 
         public virtual Pro_Presentacion Pro_Presentacion { get; set; }
     }

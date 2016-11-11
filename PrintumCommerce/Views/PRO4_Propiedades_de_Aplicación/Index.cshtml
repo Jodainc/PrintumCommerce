@@ -1,0 +1,106 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.PRO4_Propiedades_de_Aplicación>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRO1_Productos.COD_PRODUCTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proceso_de_Impresión)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Naturaleza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Viscosidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sustrato_Recomendado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LPI1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LPI2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LPI3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.G_M2___BCM1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.G_M2___BCM2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.G_M2___BCM3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Velocidad_de_Secado_____m_min)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Productos_Impresos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRO1_Productos.COD_PRODUCTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proceso_de_Impresión)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naturaleza)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Viscosidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sustrato_Recomendado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LPI1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LPI2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LPI3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.G_M2___BCM1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.G_M2___BCM2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.G_M2___BCM3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Velocidad_de_Secado_____m_min)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Productos_Impresos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCode })
+        </td>
+    </tr>
+}
+
+</table>

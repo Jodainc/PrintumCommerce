@@ -2,58 +2,57 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.C2Codigo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.C2cOMPONENTE)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.C2pORCEN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.C2nOcAS)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.C2Codigo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.C2cOMPONENTE)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.C2pORCEN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.C2nOcAS)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idCode }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idCode }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idCode })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.C2Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C2cOMPONENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C2pORCEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C2nOcAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pro_hsEG_Codigo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.C2Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C2cOMPONENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C2pORCEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C2nOcAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pro_hsEG_Codigo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCode })
+        </td>
+    </tr>
+}
+
+</table>

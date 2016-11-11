@@ -8,6 +8,12 @@ namespace PrintumCommerce.Models.Access
 
     public partial class rRHH_pRESTAMOS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public rRHH_pRESTAMOS()
+        {
+            rRHH_pRESTAMOS_pAGOS = new HashSet<rRHH_pRESTAMOS_pAGOS>();
+        }
+
         [Key]
         public int nO_pRESTAMO { get; set; }
 
@@ -37,5 +43,8 @@ namespace PrintumCommerce.Models.Access
 
         [StringLength(255)]
         public string nOcONTRATO { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<rRHH_pRESTAMOS_pAGOS> rRHH_pRESTAMOS_pAGOS { get; set; }
     }
 }
