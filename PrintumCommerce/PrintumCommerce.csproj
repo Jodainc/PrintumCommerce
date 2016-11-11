@@ -216,6 +216,7 @@
     <Compile Include="Controllers\FChs\PRO9_Instrucciones_de_SeguridadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProCertificos\Pro_CertificadosController.cs" />
     <Compile Include="Controllers\ProHe\pRO_hsEGController.cs" />
     <Compile Include="Controllers\ProHe\pRO_hsEG_cOMPOController.cs" />
     <Compile Include="Controllers\ProHe\pRO_hsEG_ePPController.cs" />
@@ -706,6 +707,11 @@
     <Content Include="Views\PRO99_Pedido\Index.cshtml" />
     <Content Include="Views\pRO_hsEG\PDF.cshtml" />
     <Content Include="Views\PRO1_Productos\PDF.cshtml" />
+    <Content Include="Views\Pro_Certificados\Create.cshtml" />
+    <Content Include="Views\Pro_Certificados\Delete.cshtml" />
+    <Content Include="Views\Pro_Certificados\Details.cshtml" />
+    <Content Include="Views\Pro_Certificados\Edit.cshtml" />
+    <Content Include="Views\Pro_Certificados\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
@@ -714,7 +720,9 @@
     <Folder Include="Content\images\" />
     <Folder Include="Content\js\" />
     <Folder Include="Content\StatePho\" />
+    <Folder Include="Controllers\ProCertificos\API\" />
     <Folder Include="Controllers\Pro_Presantation\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -807,7 +815,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58126</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58126/</IISUrl>
+          <IISUrl>http://localhost:8080/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

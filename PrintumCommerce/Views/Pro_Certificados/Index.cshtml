@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.Pro_Certificados>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Productos.Descripción)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Presentacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Espectro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cERTIdRIVE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Productos.Descripción)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Presentacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Espectro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cERTIdRIVE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.No }) |
+            @Html.ActionLink("Details", "Details", new { id=item.No }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.No })
+        </td>
+    </tr>
+}
+
+</table>

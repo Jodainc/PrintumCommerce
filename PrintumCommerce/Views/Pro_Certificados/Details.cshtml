@@ -1,0 +1,59 @@
+﻿@model PrintumCommerce.Models.Access.Pro_Certificados
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pro_Certificados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Productos.Descripción)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productos.Descripción)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Presentacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Presentacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Espectro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Espectro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cERTIdRIVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cERTIdRIVE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.No }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
