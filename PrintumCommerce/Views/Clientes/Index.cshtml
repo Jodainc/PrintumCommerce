@@ -1,0 +1,286 @@
+﻿@model IEnumerable<PrintumCommerce.Models.Access.Clientes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepresentanteLegal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDRP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sector)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Barrio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Celular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDVENDEDOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plazo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cupo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contacto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WebSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Creacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creado_Por)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cONSUMO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEF_fIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEF_cOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eSPECIAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.h_lUN_vIE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.h_sAB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dIAS_cOBRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nOTAS_cOBRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.F_INI_aCT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlazoP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CupoP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEF_cOM1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEF_cOM2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEF_cOM3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEF_cOM4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lEADtIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sTOCKmAX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepresentanteLegal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDRP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sector)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Barrio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDVENDEDOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plazo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cupo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contacto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_Creacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Creado_Por)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cONSUMO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEF_fIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEF_cOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eSPECIAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.h_lUN_vIE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.h_sAB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dIAS_cOBRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nOTAS_cOBRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.F_INI_aCT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlazoP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CupoP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEF_cOM1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEF_cOM2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEF_cOM3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rEF_cOM4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lEADtIME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sTOCKmAX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CCC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

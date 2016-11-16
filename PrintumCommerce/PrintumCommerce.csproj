@@ -57,6 +57,10 @@
       <HintPath>..\packages\RazorPDF.1.0.0\lib\net45\RazorPDF.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestfulRouting, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestfulRouting.1.6.0\lib\RestfulRouting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -111,6 +115,10 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivator.1.0.0.0\lib\WebActivator.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -187,14 +195,94 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\api\apiAreaRegistration.cs" />
+    <Compile Include="Areas\api\Controllers\UsersController.cs" />
+    <Compile Include="Areas\api\Models\AspNetRoles.cs" />
+    <Compile Include="Areas\api\Models\AspNetUserLogins.cs" />
+    <Compile Include="Areas\api\Models\AspNetUsers.cs" />
+    <Compile Include="Areas\api\Models\Cities.cs" />
+    <Compile Include="Areas\api\Models\Clientes.cs" />
+    <Compile Include="Areas\api\Models\Clientes_CONTAC.cs" />
+    <Compile Include="Areas\api\Models\Clientes_Estadistica.cs" />
+    <Compile Include="Areas\api\Models\Clientes_Maquinas.cs" />
+    <Compile Include="Areas\api\Models\CLI_DIR.cs" />
+    <Compile Include="Areas\api\Models\CLI_dIR_OP.cs" />
+    <Compile Include="Areas\api\Models\cLI_lINExvENDOR.cs" />
+    <Compile Include="Areas\api\Models\cLI_pRO_pROPIEDADES.cs" />
+    <Compile Include="Areas\api\Models\Companies.cs" />
+    <Compile Include="Areas\api\Models\Credito.cs" />
+    <Compile Include="Areas\api\Models\DepartmentModels.cs" />
+    <Compile Include="Areas\api\Models\FC_Bancos.cs" />
+    <Compile Include="Areas\api\Models\FC_Creditos.cs" />
+    <Compile Include="Areas\api\Models\FC_Gastos.cs" />
+    <Compile Include="Areas\api\Models\FC_Proveedores.cs" />
+    <Compile Include="Areas\api\Models\FC_Saldo_Ayer.cs" />
+    <Compile Include="Areas\api\Models\FC_Sem.cs" />
+    <Compile Include="Areas\api\Models\iMPORTACIONES.cs" />
+    <Compile Include="Areas\api\Models\iMPORTACIONES_D.cs" />
+    <Compile Include="Areas\api\Models\lQ_fAC_dESCUENTOS_fIN.cs" />
+    <Compile Include="Areas\api\Models\lQ_fIGURAS.cs" />
+    <Compile Include="Areas\api\Models\lQ_lIST_dCTOS.cs" />
+    <Compile Include="Areas\api\Models\lQ_tpRO.cs" />
+    <Compile Include="Areas\api\Models\Model1.cs" />
+    <Compile Include="Areas\api\Models\Pedidos.cs" />
+    <Compile Include="Areas\api\Models\Pedidos_Productos.cs" />
+    <Compile Include="Areas\api\Models\PRO1_Productos.cs" />
+    <Compile Include="Areas\api\Models\PRO2_Cuenta_con.cs" />
+    <Compile Include="Areas\api\Models\PRO3_Propiedades_de_Impresión.cs" />
+    <Compile Include="Areas\api\Models\PRO4_Propiedades_de_Aplicación.cs" />
+    <Compile Include="Areas\api\Models\PRO5_Referencias_Existentes.cs" />
+    <Compile Include="Areas\api\Models\PRO6_Recomendaciones_de_Procesamiento.cs" />
+    <Compile Include="Areas\api\Models\PRO7_Limpieza.cs" />
+    <Compile Include="Areas\api\Models\PRO8_Almacenamiento.cs" />
+    <Compile Include="Areas\api\Models\PRO91_Unidad_de_Empaque.cs" />
+    <Compile Include="Areas\api\Models\PRO92_lAP_Propiedades_medicion_mm.cs" />
+    <Compile Include="Areas\api\Models\PRO93_lAP_Propiedades_Electricas.cs" />
+    <Compile Include="Areas\api\Models\PRO94_Recomendaciones_de_Uso.cs" />
+    <Compile Include="Areas\api\Models\PRO95_Ventajas.cs" />
+    <Compile Include="Areas\api\Models\PRO96_Garantia.cs" />
+    <Compile Include="Areas\api\Models\PRO97_ServiTec.cs" />
+    <Compile Include="Areas\api\Models\PRO98_Propiedades.cs" />
+    <Compile Include="Areas\api\Models\PRO99_Pedido.cs" />
+    <Compile Include="Areas\api\Models\PRO9_Instrucciones_de_Seguridad.cs" />
+    <Compile Include="Areas\api\Models\Productos.cs" />
+    <Compile Include="Areas\api\Models\Proveedores_Productos.cs" />
+    <Compile Include="Areas\api\Models\Pro_Certificados.cs" />
+    <Compile Include="Areas\api\Models\Pro_Envase.cs" />
+    <Compile Include="Areas\api\Models\Pro_Estandar.cs" />
+    <Compile Include="Areas\api\Models\Pro_Existencias.cs" />
+    <Compile Include="Areas\api\Models\Pro_Formula.cs" />
+    <Compile Include="Areas\api\Models\Pro_Grupos.cs" />
+    <Compile Include="Areas\api\Models\pRO_hsEG.cs" />
+    <Compile Include="Areas\api\Models\pRO_hsEG_cOMPO.cs" />
+    <Compile Include="Areas\api\Models\pRO_hsEG_ePP.cs" />
+    <Compile Include="Areas\api\Models\pRO_hsEG_oTRAiNFO.cs" />
+    <Compile Include="Areas\api\Models\Pro_Lineas.cs" />
+    <Compile Include="Areas\api\Models\pRO_lN.cs" />
+    <Compile Include="Areas\api\Models\Pro_Medicion.cs" />
+    <Compile Include="Areas\api\Models\Pro_MP_Pedidos.cs" />
+    <Compile Include="Areas\api\Models\PRO_OC.cs" />
+    <Compile Include="Areas\api\Models\PRO_OC_D.cs" />
+    <Compile Include="Areas\api\Models\PRO_OC_NC.cs" />
+    <Compile Include="Areas\api\Models\Pro_Presentacion.cs" />
+    <Compile Include="Areas\api\Models\Pro_pRUEBAS.cs" />
+    <Compile Include="Areas\api\Models\Pro_Salidas_Muestras_fECHAS.cs" />
+    <Compile Include="Areas\api\Models\Pro_Salida_Muestras.cs" />
+    <Compile Include="Areas\api\Models\Pro_Salida_Muestras_D.cs" />
+    <Compile Include="Areas\api\Models\Pro_Tiempo.cs" />
+    <Compile Include="Areas\api\Models\Pro_Valores.cs" />
+    <Compile Include="Areas\api\Models\Users.cs" />
+    <Compile Include="Areas\api\Models\VT_TRM.cs" />
     <Compile Include="ClassHelper\ComboHelper.cs" />
     <Compile Include="ClassHelper\FilHelper.cs" />
     <Compile Include="ClassHelper\MailHelper.cs" />
     <Compile Include="ClassHelper\UsersHelper.cs" />
     <Compile Include="CodeFile1.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
+    <Compile Include="Controllers\Customer\ClientesController.cs" />
     <Compile Include="Controllers\DepartmentModelsController.cs" />
     <Compile Include="Controllers\FChs\PRO1_ProductosController.cs" />
     <Compile Include="Controllers\FChs\PRO2_Cuenta_conController.cs" />
@@ -305,6 +393,14 @@
     <Compile Include="Migrations\Model1\201611101658278_Initial16.cs" />
     <Compile Include="Migrations\Model1\201611101658278_Initial16.Designer.cs">
       <DependentUpon>201611101658278_Initial16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611161459510_Initial17.cs" />
+    <Compile Include="Migrations\Model1\201611161459510_Initial17.Designer.cs">
+      <DependentUpon>201611161459510_Initial17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201611162109363_Initial18.cs" />
+    <Compile Include="Migrations\Model1\201611162109363_Initial18.Designer.cs">
+      <DependentUpon>201611162109363_Initial18.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Model1\ConfigurationB.cs" />
     <Compile Include="Models\Access\aDMIN_fORMULARIOS.cs" />
@@ -506,6 +602,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\ViewModel\ViewModelDemoVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routes.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -519,6 +616,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Areas\api\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -712,15 +810,20 @@
     <Content Include="Views\Pro_Certificados\Details.cshtml" />
     <Content Include="Views\Pro_Certificados\Edit.cshtml" />
     <Content Include="Views\Pro_Certificados\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\api\Views\Shared\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\Golo\" />
     <Folder Include="Content\images\" />
     <Folder Include="Content\js\" />
     <Folder Include="Content\StatePho\" />
-    <Folder Include="Controllers\ProCertificos\API\" />
     <Folder Include="Controllers\Pro_Presantation\" />
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
@@ -795,6 +898,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Model1\201611101658278_Initial16.resx">
       <DependentUpon>201611101658278_Initial16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611161459510_Initial17.resx">
+      <DependentUpon>201611161459510_Initial17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201611162109363_Initial18.resx">
+      <DependentUpon>201611162109363_Initial18.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

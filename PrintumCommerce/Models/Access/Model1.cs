@@ -416,5 +416,13 @@
                 .WithOptional(e => e.User1)
                 .HasForeignKey(e => e.uSER);
         }
+
+        public System.Data.Entity.DbSet<PrintumCommerce.Areas.api.Models.Users> Users { get; set; }
+
+        public System.Data.Entity.DbSet<PrintumCommerce.Areas.api.Models.Cities> Cities { get; set; }
+
+        public System.Data.Entity.DbSet<PrintumCommerce.Areas.api.Models.Companies> Companies { get; set; }
+
+        public System.Data.Entity.DbSet<PrintumCommerce.Areas.api.Models.DepartmentModels> DepartmentModels { get; set; }
     }
 }
