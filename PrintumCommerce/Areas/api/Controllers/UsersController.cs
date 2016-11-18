@@ -9,20 +9,37 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using PrintumCommerce.Areas.api.Models;
+using System.Web.Mvc;
+using System.Threading.Tasks;
+using PrintumCommerce.Models;
+using System.Web;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
 
 namespace PrintumCommerce.Areas.api.Controllers
 {
+    [System.Web.Http.Authorize]
     public class UsersController : ApiController
     {
+
         private Model1 db = new Model1();
+
         public IQueryable<Users> GetUsers()
         {
             return db.Users;
         }
-
-
         [ResponseType(typeof(Users))]
         public IHttpActionResult GetUsers(int id)
+        {
+            Users users = db.Users.Find(id);
+            if (users == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(users);
+        }
+        public IHttpActionResult GetUsers(int id,string palme)
         {
             Users users = db.Users.Find(id);
             if (users == null)

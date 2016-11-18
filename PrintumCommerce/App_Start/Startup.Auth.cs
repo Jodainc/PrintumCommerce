@@ -6,19 +6,27 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using PrintumCommerce.Models;
+using System.Web.Http;
+using Microsoft.Owin.Security.OAuth;
+using PrintumCommerce.Providers;
 
 namespace PrintumCommerce
 {
     public partial class Startup
     {
-        // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
+
+        public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
+
+        public static string PublicClientId { get; private set; }
         public void ConfigureAuth(IAppBuilder app)
         {
             // Configure the db context, user manager and signin manager to use a single instance per request
+           // GlobalConfiguration.Configure(WebApiConfig.Register);
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
+            // Enable the application to use bearer tokens to authenticate users
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
             // Configure the sign in cookie
@@ -32,10 +40,25 @@ namespace PrintumCommerce
                     // This is a security feature which is used when you change a password or add an external login to your account.  
                     OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
                         validateInterval: TimeSpan.FromMinutes(30),
-                        regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
+                        regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager,OAuthDefaults.AuthenticationType))
                 }
             });            
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+
+            // Configure the application for OAuth based flow
+            PublicClientId = "self";
+            OAuthOptions = new OAuthAuthorizationServerOptions
+            {
+                TokenEndpointPath = new PathString("/Token"),
+                Provider = new ApplicationOAuthProvider(PublicClientId),
+                AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(60),
+                // In production mode set AllowInsecureHttp = false
+                AllowInsecureHttp = true
+            };
+
+            // Enable the application to use bearer tokens to authenticate users
+            app.UseOAuthBearerTokens(OAuthOptions);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));

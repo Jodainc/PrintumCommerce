@@ -4,14 +4,22 @@
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using PrintumCommerce.Models;
 
     public partial class Model1 : DbContext
     {
         public Model1()
             : base("name=Model11")
         {
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
         }
 
+        public static Model1 Create()
+        {
+            return new Model1();
+        }
         public  DbSet<AspNetRoles> AspNetRoles { get; set; }
         public  DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public  DbSet<AspNetUsers> AspNetUsers { get; set; }

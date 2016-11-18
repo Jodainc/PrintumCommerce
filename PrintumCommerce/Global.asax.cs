@@ -15,6 +15,7 @@ namespace PrintumCommerce
     {
         protected void Application_Start()
         {
+            //config.EnableCors();
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.Access.Model1, Migrations.Model1.ConfigurationB>());
           //Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.DBPrintumContext, Migrations.DBPrintumContext.ConfigurationB>());
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.DBPrintumContext, Migrations.DBPrintumContext.Configuration>());
