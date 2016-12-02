@@ -18,16 +18,16 @@ using Microsoft.AspNet.Identity;
 
 namespace PrintumCommerce.Areas.api.Controllers
 {
-    [System.Web.Http.Authorize]
     public class UsersController : ApiController
     {
 
         private Model1 db = new Model1();
-
+        [System.Web.Http.Authorize]
         public IQueryable<Users> GetUsers()
         {
             return db.Users;
         }
+
         [ResponseType(typeof(Users))]
         public IHttpActionResult GetUsers(int id)
         {
@@ -39,6 +39,7 @@ namespace PrintumCommerce.Areas.api.Controllers
 
             return Ok(users);
         }
+        [System.Web.Http.Authorize]
         public IHttpActionResult GetUsers(int id,string palme)
         {
             Users users = db.Users.Find(id);
@@ -49,8 +50,7 @@ namespace PrintumCommerce.Areas.api.Controllers
 
             return Ok(users);
         }
-
-        // PUT: api/Users/5
+        [System.Web.Http.Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutUsers(int id, Users users)
         {
@@ -84,8 +84,7 @@ namespace PrintumCommerce.Areas.api.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
-        // POST: api/Users
+        [System.Web.Http.Authorize]
         [ResponseType(typeof(Users))]
         public IHttpActionResult PostUsers(Users users)
         {
@@ -99,8 +98,7 @@ namespace PrintumCommerce.Areas.api.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = users.UserId }, users);
         }
-
-        // DELETE: api/Users/5
+        [System.Web.Http.Authorize]
         [ResponseType(typeof(Users))]
         public IHttpActionResult DeleteUsers(int id)
         {
@@ -115,7 +113,6 @@ namespace PrintumCommerce.Areas.api.Controllers
 
             return Ok(users);
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
