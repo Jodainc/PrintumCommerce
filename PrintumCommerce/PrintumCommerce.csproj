@@ -215,6 +215,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\api\apiAreaRegistration.cs" />
     <Compile Include="Areas\api\Controllers\BaseApiController.cs" />
+    <Compile Include="Areas\api\Controllers\Pro_CertificadosController.cs" />
     <Compile Include="Areas\api\Controllers\UsersController.cs" />
     <Compile Include="Areas\api\Models\AspNetRoles.cs" />
     <Compile Include="Areas\api\Models\AspNetUserLogins.cs" />
