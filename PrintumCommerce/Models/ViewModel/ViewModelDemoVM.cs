@@ -44,7 +44,8 @@ namespace PrintumCommerce.Models.ViewModel
         public List<Productos> hojasSerguProductos { set; get; }
 
         public List<PRO1_Productos> hojasSerguProductos1 { set; get; }
-
+        public List<Pro_Lineas> lisneas { set; get; }
+ 
 
     }
 }

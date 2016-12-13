@@ -30,6 +30,7 @@ namespace PrintumCommerce.Controllers.FChs
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var ppRO1_Productos = db.PRO1_Productos.Where(p => p.Cod_pro == id);
+            var ppRO1 = db.Pro_Lineas;
             var ppRO2 = db.PRO2_Cuenta_con.Where(p => p.Cod_PRO == id);
             var ppRO3 = db.PRO3_Propiedades_de_Impresión.Where(p => p.Cod_PRO == id);
             var ppRO4 = db.PRO4_Propiedades_de_Aplicación.Where(p => p.Cod_PRO == id);
@@ -47,6 +48,7 @@ namespace PrintumCommerce.Controllers.FChs
             var ppRO97 = db.PRO97_ServiTec.Where(p => p.Cod_PRO == id);
             var ppRO98 = db.PRO98_Propiedades.Where(p => p.Cod_PRO == id);
             var ppRO99 = db.PRO99_Pedido.Where(p => p.Cod_PRO == id);
+            var ppR0100 = db.Pro_Grupos;
             vm.hojasSerguProductos1 = ppRO1_Productos.ToList();
             vm.hojasSeGurPro2 = ppRO2.ToList();
             vm.hojasSeGurPro3 = ppRO3.ToList();
@@ -64,6 +66,8 @@ namespace PrintumCommerce.Controllers.FChs
             vm.hojasSergu96 = ppRO96.ToList();
             vm.hojasSergu99 = ppRO99.ToList();
             vm.hojasSergu95 = ppRO95.ToList();
+            vm.lisneas = ppRO1.ToList();
+            vm.hojasSeGuriPGrupos = ppR0100.ToList();
             return new PdfResult(vm, "PDF");
            // return View(vm);
         }
