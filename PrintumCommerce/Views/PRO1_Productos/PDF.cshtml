@@ -41,12 +41,34 @@
 
                 }
             </cell>
-            <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                @if (!(String.IsNullOrEmpty(item.Imagen)))
-                {
-                    <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.Imagen))" />
+   
+
+                @{
+                    string aa = Html.DisplayFor(modelItem => item.Imagen).ToString();
+                    if (!(aa.Contains("pdf")))
+                    {
+                        string a = Context.Server.MapPath("~/Content/images/" + Html.DisplayFor(modelItem => item.Imagen));
+                        if (!(String.IsNullOrEmpty(item.Imagen)) && File.Exists(a))
+                        {
+                            <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                                <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.Imagen))" />
+                            </cell>
+                        }
+                        else
+                        {
+                            <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                                <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/ATENCION.JPG")" />
+                            </cell>
+                        }
+                    }
+                    else
+                    {
+                        <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                            <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/ATENCION.JPG")" />
+                        </cell>
+                    }
                 }
-            </cell>
+
         </row>
         <row background-color="#f9f9f9" borderwidth="0">
             <cell backgroundcolor="#f9f9f9" borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
@@ -71,7 +93,7 @@
             </cell>
         </row>
     </table>
-}
+                    }
 
 @foreach (var item in Model.hojasSerguProductos1)
 {
@@ -101,7 +123,113 @@
         </row>
     }
 </table>
+@{
+    string a1010 = "";
+    foreach (var item in Model.hojasSergu901)
+    {
+        a1010 = item.Diagramama;
+    }
+    if (!(String.IsNullOrEmpty(a1010)))
+    {
+<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#f9f9f9" widths="90" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    @foreach (var item in Model.hojasSergu901)
+    {
+        <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
+            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Diagrama</chunk>
+            </cell>
+        </row>
+        <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
+            @{
+                string aa = Html.DisplayFor(modelItem => item.Diagramama).ToString();
+                if (!(aa.Contains("pdf")))
+                {
+                    string a = Context.Server.MapPath("~/Content/images/" + Html.DisplayFor(modelItem => item.Diagramama));
+                    if (!(String.IsNullOrEmpty(item.Diagramama)) && File.Exists(a))
+                    {
+                        <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                            <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/" + @Html.DisplayFor(modelItem => item.Diagramama))" />
+                        </cell>
+                    }
+                    else
+                    {
+                        <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                            <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/ATENCION.JPG")" />
+                        </cell>
+                    }
+                }
+                else
+                {
+                    <cell borderwidth="0" width="4%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                        <image height="5px" width="5%" url="@Context.Server.MapPath("~/Content/images/ATENCION.JPG")" />
+                    </cell>
+                }
+            }
+        </row>
+                }
+</table>
+        } 
+    }
+@{
+    string a1011 = "";
+    foreach (var item in Model.hojasSergu92)
+    {
+        a1011 = item.Info;
+    }
+    if (!(String.IsNullOrEmpty(a1011)))
+    {
+        <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#f9f9f9" widths="15;20;5;20;5" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+         
+                <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pROPIEDADES dE mEDICION eN mm</chunk>
+                    </cell>
+@foreach (var item in Model.hojasSergu92)
+{
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"></chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"></chunk>
+                    </cell>
+}
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pROPIEDADES eLECTRICAS</chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"></chunk>
+                    </cell>
+                </row>
+                <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"></chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Pegabilidad</chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Procesamiento_Pegabilidad)</chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Impresión Láser</chunk>
+                    </cell>
+                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Procesamiento_Impresión_Láser)</chunk>
+                    </cell>
+                </row>
 
+            }
+        </table>
+    }
+}
+
+
+@{ 
+    foreach (var item10 in Model.hojasSeGurPro3)
+    {
+
+        if (!(String.IsNullOrEmpty(item10.Procesamiento_Estampado_al_Calor)))
+        {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#f9f9f9" widths="15;20;5;5;5;5;5;5;5;5;5;5" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
         <cell borderwidth="1" vertical-align="top" left="true" right="false" top="false" bottom="true" horizontalalign="Left"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Propiedades </chunk>       </cell>
@@ -513,6 +641,9 @@
 
                     }
 </table>
+                        }
+                    }
+}
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#f9f9f9" widths="15;20;5;20;5" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     @foreach (var item in Model.hojasSeGurPro3)
     {
@@ -553,13 +684,21 @@
 
     }
 </table>
+@{
+    string a1000 = "";
+    foreach (var item in Model.hojasSeGurPro4)
+    {
+        a1000 = item.Viscosidad;
+    }
+    if (!(String.IsNullOrEmpty(a1000)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#f9f9f9" widths="20;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
         <cell borderwidth="0" vertical-align="top" left="true" right="false" top="false" bottom="true" horizontalalign="Left"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Propiedades de Aplicación</chunk>       </cell>
         <cell borderwidth="0" vertical-align="top" left="true" right="false" top="false" bottom="true" horizontalalign="Left"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> </chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSeGurPro4)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="0" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Proceso de Impresión </chunk>
@@ -594,9 +733,13 @@
                 </row>
     }
 </table>
-
-@foreach (var item in Model.hojasSeGurPro4)
-{
+    }
+}
+@{ 
+    foreach (var item in Model.hojasSeGurPro4)
+    {
+        if (!(String.IsNullOrEmpty(item.Sustrato_Recomendado)))
+        {
     <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#f9f9f9" widths="20;20;20;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
             <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Consumo Recomendado</chunk>       </cell>
@@ -658,7 +801,17 @@
             <cell borderwidth="0" vertical-align="top" left="true" right="false" top="false" bottom="true" horizontalalign="Left"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER">  </chunk>      </cell>
         </row>
     </table>
+        }
+    }
 }
+@{ 
+    string a1001 = "";
+    foreach (var item in Model.hojasSegurPro5)
+    {
+        a1001 = item.Descripcion;
+    }
+    if (!(String.IsNullOrEmpty(a1001)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="10;10;10;10;10;10;10;10" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Referencias Existentes</chunk>       </cell>
@@ -681,7 +834,7 @@
         <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER">   Agua  </chunk>   </cell>
     </row>
     @foreach (var item in Model.hojasSegurPro5)
-            {
+    {
         <row background-color="#f9f9f9" align-content="left" widths="10;10;10;10" borderwidth="1">
 
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> @Html.DisplayFor(modelItem => item.Descripcion)</chunk>       </cell>
@@ -695,13 +848,22 @@
         </row>
     }
 </table>
-
+    }
+    }
+@{
+    string a1002 = "";
+    foreach (var item in Model.hojasSergu6)
+    {
+        a1002 = item.Informacion;
+    }
+    if (!(String.IsNullOrEmpty(a1002)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="30" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Recomendaciones de Procesamiento</chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSergu6)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Informacion)</chunk>
@@ -709,14 +871,21 @@
         </row>
     }
 </table>
-
-
+    } }
+@{
+    string a1003 = "";
+    foreach (var item in Model.hojasSergu7)
+    {
+        a1003 = item.Informacion;
+    }
+    if (!(String.IsNullOrEmpty(a1003)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="30" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Limpieza</chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSergu7)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Informacion)</chunk>
@@ -724,13 +893,21 @@
         </row>
     }
 </table>
-
+    } }
+@{
+    string a1005 = "";
+    foreach (var item in Model.hojasSergu8)
+    {
+        a1005 = item.Informacion;
+    }
+    if (!(String.IsNullOrEmpty(a1005)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="30" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Almacenamiento</chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSergu8)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Informacion)</chunk>
@@ -738,14 +915,22 @@
         </row>
     }
 </table>
+    } }
 
-
+@{
+    string a1007 = "";
+    foreach (var item in Model.hojasSergu9)
+    {
+        a1007 = item.Informacion;
+    }
+    if (!(String.IsNullOrEmpty(a1007)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="30" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Instrucciones de seguridad</chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSergu9)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Informacion)</chunk>
@@ -754,13 +939,22 @@
     }
 
 </table>
+    } }
 
+@{
+    string a1008 = "";
+    foreach (var item in Model.hojasSergu8)
+    {
+        a1008 = item.Informacion;
+    }
+    if (!(String.IsNullOrEmpty(a1008)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="30" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Almacenamiento</chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSergu8)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Informacion)</chunk>
@@ -768,14 +962,22 @@
         </row>
     }
 </table>
+    } }
 
-
+@{
+    string a1009 = "";
+    foreach (var item in Model.hojasSergu91)
+    {
+        a1009 = item.Informacion;
+    }
+    if (!(String.IsNullOrEmpty(a1009)))
+    {
 <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#ffffff" widths="30" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#f9f9f9" align-content="center" widths="10;10;10;10" borderwidth="1">
         <cell backgroundcolor="#7a7e89" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="CENTER"> Unidad de empaque</chunk>       </cell>
     </row>
     @foreach (var item in Model.hojasSergu91)
-            {
+    {
         <row background-color="#f9f9f9" align-content="center">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
                 <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Informacion)</chunk>
@@ -783,3 +985,5 @@
         </row>
     }
 </table>
+        }
+    }

@@ -84,6 +84,7 @@
         public virtual DbSet<PRO91_Unidad_de_Empaque> PRO91_Unidad_de_Empaque { get; set; }
         public virtual DbSet<PRO92_lAP_Propiedades_medicion_mm> PRO92_lAP_Propiedades_medicion_mm { get; set; }
         public virtual DbSet<PRO93_lAP_Propiedades_Electricas> PRO93_lAP_Propiedades_Electricas { get; set; }
+        public virtual DbSet<PRO93_LAP_DIAGRAMA> PRO93_lAP_DIAGRAMA { get; set; }
         public virtual DbSet<PRO94_Recomendaciones_de_Uso> PRO94_Recomendaciones_de_Uso { get; set; }
         public virtual DbSet<PRO95_Ventajas> PRO95_Ventajas { get; set; }
         public virtual DbSet<PRO96_Garantia> PRO96_Garantia { get; set; }

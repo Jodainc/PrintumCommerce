@@ -85,6 +85,8 @@ namespace PrintumCommerce.Models.Access
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRO93_lAP_Propiedades_Electricas> PRO93_lAP_Propiedades_Electricas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRO93_LAP_DIAGRAMA> PRO93_lAP_Propiedades_DIAGRAMA { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRO94_Recomendaciones_de_Uso> PRO94_Recomendaciones_de_Uso { get; set; }

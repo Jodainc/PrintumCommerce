@@ -30,6 +30,8 @@ namespace PrintumCommerce.Models.ViewModel
 
         public List<PRO93_lAP_Propiedades_Electricas> hojasSergu93 { set; get; }
 
+        public List<PRO93_LAP_DIAGRAMA> hojasSergu901 { set; get; }
+
         public List<PRO94_Recomendaciones_de_Uso> hojasSergu94 { set; get; }
 
         public List<PRO96_Garantia> hojasSergu96 { set; get; }
@@ -45,6 +47,7 @@ namespace PrintumCommerce.Models.ViewModel
 
         public List<PRO1_Productos> hojasSerguProductos1 { set; get; }
         public List<Pro_Lineas> lisneas { set; get; }
+
  
 
     }

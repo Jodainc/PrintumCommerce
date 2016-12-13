@@ -42,6 +42,7 @@ namespace PrintumCommerce.Controllers.FChs
             var ppRO91 = db.PRO91_Unidad_de_Empaque.Where(p => p.Cod_PRO == id);
             var ppRO92 = db.PRO92_lAP_Propiedades_medicion_mm.Where(p => p.Cod_PRO == id);
             var ppRO93 = db.PRO93_lAP_Propiedades_Electricas.Where(p => p.Cod_PRO == id);
+            var ppRO932 = db.PRO93_lAP_DIAGRAMA.Where(p => p.Cod_PRO == id);
             var ppRO94 = db.PRO94_Recomendaciones_de_Uso.Where(p => p.Cod_PRO == id);
             var ppRO95 = db.PRO95_Ventajas.Where(p => p.Cod_PRO == id);
             var ppRO96 = db.PRO96_Garantia.Where(p => p.Cod_PRO == id);
@@ -66,6 +67,7 @@ namespace PrintumCommerce.Controllers.FChs
             vm.hojasSergu96 = ppRO96.ToList();
             vm.hojasSergu99 = ppRO99.ToList();
             vm.hojasSergu95 = ppRO95.ToList();
+            vm.hojasSergu901 = ppRO932.ToList();
             vm.lisneas = ppRO1.ToList();
             vm.hojasSeGuriPGrupos = ppR0100.ToList();
             return new PdfResult(vm, "PDF");

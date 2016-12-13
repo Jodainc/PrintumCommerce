@@ -431,6 +431,10 @@
     <Compile Include="Migrations\Model1\201611171657036_Token.Designer.cs">
       <DependentUpon>201611171657036_Token.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Model1\201612132055532_AddMissionStatement.cs" />
+    <Compile Include="Migrations\Model1\201612132055532_AddMissionStatement.Designer.cs">
+      <DependentUpon>201612132055532_AddMissionStatement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Model1\ConfigurationB.cs" />
     <Compile Include="Models\Access\aDMIN_fORMULARIOS.cs" />
     <Compile Include="Models\Access\aTUALIZACION.cs" />
@@ -479,6 +483,7 @@
     <Compile Include="Models\Access\PRO8_Almacenamiento.cs" />
     <Compile Include="Models\Access\PRO91_Unidad_de_Empaque.cs" />
     <Compile Include="Models\Access\PRO92_lAP_Propiedades_medicion_mm.cs" />
+    <Compile Include="Models\Access\PRO93_LAP_DIAGRAMA.cs" />
     <Compile Include="Models\Access\PRO93_lAP_Propiedades_Electricas.cs" />
     <Compile Include="Models\Access\PRO94_Recomendaciones_de_Uso.cs" />
     <Compile Include="Models\Access\PRO95_Ventajas.cs" />
@@ -940,6 +945,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Model1\201611171657036_Token.resx">
       <DependentUpon>201611171657036_Token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201612132055532_AddMissionStatement.resx">
+      <DependentUpon>201612132055532_AddMissionStatement.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
