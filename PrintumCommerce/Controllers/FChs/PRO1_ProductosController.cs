@@ -65,6 +65,7 @@ namespace PrintumCommerce.Controllers.FChs
             vm.hojasSergu94 = ppRO94.ToList();
             vm.hojasSergu98 = ppRO98.ToList();
             vm.hojasSergu96 = ppRO96.ToList();
+            vm.hojasSergu97 = ppRO97.ToList();
             vm.hojasSergu99 = ppRO99.ToList();
             vm.hojasSergu95 = ppRO95.ToList();
             vm.hojasSergu901 = ppRO932.ToList();

@@ -46,6 +46,11 @@ namespace PrintumCommerce.Models
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [Range(1, double.MaxValue, ErrorMessage = "Seleccione un {0}")]
+        [Display(Name = "Nit")]
+        public int nit_Number { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Range(1, double.MaxValue, ErrorMessage = "Seleccione un {0}")]
         [Display (Name ="Departamento")]
         public int DepartmentId { get; set; }
 

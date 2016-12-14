@@ -20,7 +20,6 @@ namespace PrintumCommerce.Controllers
             var users = db.Users.Include(u => u.City).Include(u => u.Company).Include(u => u.DepartmentModel);
             return View(users.ToList());
         }
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,17 +34,16 @@ namespace PrintumCommerce.Controllers
             return View(user);
         }
 
+
         public ActionResult Create()
         {
-            ViewBag.CityId = new SelectList(ComboHelper.getCities(), "CityId", "CitiesName");
-            ViewBag.CompanyId = new SelectList(ComboHelper.getCompanies(), "CompanyId", "CompanyName");
-            ViewBag.DepartmentId = new SelectList(ComboHelper.getDepartment(), "DepartmentId", "DepartmentName");
+            ViewBag.CityId = new SelectList(db.Cities, "CityId", "CitiesName");
+            ViewBag.CompanyId = new SelectList(db.Companies, "CompanyId", "CompanyName");
+            ViewBag.DepartmentId = new SelectList(db.DepartmentModels, "DepartmentId", "DepartmentName");
             return View();
         }
 
-        // POST: Users/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+  
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create( User user)
@@ -92,6 +90,7 @@ namespace PrintumCommerce.Controllers
             return View(user);
         }
 
+    
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -103,18 +102,16 @@ namespace PrintumCommerce.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CityId = new SelectList(ComboHelper.getCities(), "CityId", "CitiesName", user.CityId);
-            ViewBag.CompanyId = new SelectList(ComboHelper.getCompanies(), "CompanyId", "CompanyName", user.CompanyId);
-            ViewBag.DepartmentId = new SelectList(ComboHelper.getDepartment(), "DepartmentId", "DepartmentName", user.DepartmentId);
+            ViewBag.CityId = new SelectList(db.Cities, "CityId", "CitiesName", user.CityId);
+            ViewBag.CompanyId = new SelectList(db.Companies, "CompanyId", "CompanyName", user.CompanyId);
+            ViewBag.DepartmentId = new SelectList(db.DepartmentModels, "DepartmentId", "DepartmentName", user.DepartmentId);
             return View(user);
         }
 
-
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+  
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(User user)
+        public ActionResult Edit( User user)
         {
             if (ModelState.IsValid)
             {
@@ -162,6 +159,7 @@ namespace PrintumCommerce.Controllers
             return View(user);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -169,10 +167,8 @@ namespace PrintumCommerce.Controllers
             User user = db.Users.Find(id);
             db.Users.Remove(user);
             db.SaveChanges();
-            UsersHelper.DeleteUser(user.UserName);
             return RedirectToAction("Index");
         }
-
         public JsonResult GetCities(int departmentId)
         {
             db.Configuration.ProxyCreationEnabled = false;

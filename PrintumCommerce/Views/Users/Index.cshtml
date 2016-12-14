@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -24,7 +25,10 @@
             @Html.DisplayNameFor(model => model.UserName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Fullname)
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UserPhone)
@@ -34,6 +38,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UserPhoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nit_Number)
         </th>
         <th></th>
     </tr>
@@ -53,9 +60,11 @@
             @Html.DisplayFor(modelItem => item.UserName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Fullname)
+            @Html.DisplayFor(modelItem => item.FirstName)
         </td>
-
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.UserPhone)
         </td>
@@ -67,6 +76,9 @@
             {
                 <img src="@Url.Content(item.UserPhoto)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
             }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nit_Number)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |

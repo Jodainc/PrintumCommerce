@@ -4,38 +4,38 @@
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="10;8;20;10" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
-        <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"></chunk></cell>
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"></cell>
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Left"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> Identificacion del producto</chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"></chunk></cell>
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="10;8;20;10" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+        <row background-color="#4081f9" align-content="center" widths="10;10;10;10" borderwidth="1">
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"></chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Left"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> Identificacion del producto</chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"></chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="0" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Código</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="0" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Código</chunk>
             </cell>
-            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">nOMBRE</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">nOMBRE</chunk>
             </cell>
             <cell borderwidth="0" width="25%" left="false" right="false" top="false" bottom="true">
-                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white"> @Html.DisplayFor(modelItem => item.C1nOMBRE) </chunk>
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="black"> @Html.DisplayFor(modelItem => item.C1nOMBRE) </chunk>
             </cell>
 
         </row>
         <row background-color="#dddddd" borderwidth="0">
-            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white"> nO UN</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black"> nO UN</chunk>
             </cell>
-            <cell borderwidth="0" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.Codigo)</chunk>
+            <cell  borderwidth="0" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.Codigo)</chunk>
+            </cell>
+            <cell backgroundcolor="#0042bf" borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="black">sINONIMOS</chunk>
             </cell>
             <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">sINONIMOS</chunk>
-            </cell>
-            <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white"> @Html.DisplayFor(modelItem => item.C1sINONIMOS) </chunk>
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="black"> @Html.DisplayFor(modelItem => item.C1sINONIMOS) </chunk>
             </cell>
 
         </row>
@@ -43,47 +43,47 @@
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="10;8" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="10;8" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Formula Quimica</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Formula Quimica</chunk>
             </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">Provedor  </chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">Provedor  </chunk>
             </cell>
 
 
         </row>
         <row background-color="#dddddd" borderwidth="0">
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white"> @Html.DisplayFor(modelItem => item.C1fXqUIMICA)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black"> @Html.DisplayFor(modelItem => item.C1fXqUIMICA)</chunk>
             </cell>
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pRiNtUm SAS</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pRiNtUm SAS</chunk>
             </cell>
 
         </row>
     </table>
 }
-<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20;8;8" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20;8;8" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> Composicion/Informacion Sobre</chunk> </cell>
-        <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center" horizontalalign="Left"> los componentes</chunk></cell>
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"></cell>
+        <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> Composicion/Informacion Sobre</chunk> </cell>
+        <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center" horizontalalign="Left"> los componentes</chunk></cell>
+        <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center"></cell>
 
 
     </row>
     <row background-color="#dddddd" align-content="center">
 
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:14;font-weight:bold;align-content:center; " color="white" align="center">Componente</chunk>
+        <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+            <chunk style="font-size:14;font-weight:bold;align-content:center; " color="black" align="center">Componente</chunk>
         </cell>
-        <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:14;font-weight:bold;align-content:center; " color="white">%</chunk>
+        <cell backgroundcolor="#0042bf" borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+            <chunk style="font-size:14;font-weight:bold;align-content:center; " color="black">%</chunk>
         </cell>
-        <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:14;font-weight:bold;align-content:center; " color="white"> No Cas</chunk>
+        <cell backgroundcolor="#0042bf" borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+            <chunk style="font-size:14;font-weight:bold;align-content:center; " color="black"> No Cas</chunk>
         </cell>
 
     </row>
@@ -91,13 +91,13 @@
     {
         <row background-color="#dddddd" borderwidth="0">
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C2cOMPONENTE)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.C2cOMPONENTE)</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C2pORCEN)</chunk>
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C2pORCEN)</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="white"> @Html.DisplayFor(modelItem => item.C2nOcAS) </chunk>
+                <chunk style="font-size:12;font-weight:bold;align-content:center; " color="black"> @Html.DisplayFor(modelItem => item.C2nOcAS) </chunk>
             </cell>
 
         </row>
@@ -105,54 +105,54 @@
 </table>
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Identificación de Peligros</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Identificación de Peligros</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">rIESGO</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">rIESGO</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C3rIESTOsALUD)</chunk>
-            </cell>
-        </row>
-        <row background-color="#dddddd" align-content="center">
-
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Inhalación</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C3iNHALACION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C3rIESTOsALUD)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Ingestión</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Inhalación</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C3iNGESTION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C3iNHALACION)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Contacto piel</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Ingestión</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C3cONTACpIEL)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C3iNGESTION)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">cONTACTO oJOS</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Contacto piel</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C3cONTACoJOS)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C3cONTACpIEL)</chunk>
+            </cell>
+        </row>
+        <row background-color="#dddddd" align-content="center">
+
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">cONTACTO oJOS</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C3cONTACoJOS)</chunk>
             </cell>
         </row>
     </table>
@@ -160,48 +160,48 @@
 @foreach (var item in Model.Item1)
 {
 
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Primeros Auxilios</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Primeros Auxilios</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Inhalacion</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Inhalacion</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C4iNHALACION)</chunk>
-            </cell>
-
-        </row>
-        <row background-color="#dddddd" align-content="center">
-
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Ingestion</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C4iNGESTION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C4iNHALACION)</chunk>
             </cell>
 
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Contacto Piel</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Ingestion</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C4cONTACpIEL)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C4iNGESTION)</chunk>
             </cell>
 
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Contacto Ojos</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Contacto Piel</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C4cONTACoJOS)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C4cONTACpIEL)</chunk>
+            </cell>
+
+        </row>
+        <row background-color="#dddddd" align-content="center">
+
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Contacto Ojos</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C4cONTACoJOS)</chunk>
             </cell>
 
         </row>
@@ -209,94 +209,94 @@
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Medidas de lucha contra incendios</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Medidas de lucha contra incendios</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Punto de Inflamación</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Punto de Inflamación</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5piNFLAMACION)</chunk>
-            </cell>
-
-        </row>
-        <row background-color="#dddddd" align-content="center">
-
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Temperatura de autoignición</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5tEMaUTOiGNICION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5piNFLAMACION)</chunk>
             </cell>
 
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Peligros de incendio</chunk>
+
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Temperatura de autoignición</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5lIMITiNFLAMA)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5tEMaUTOiGNICION)</chunk>
+            </cell>
+
+        </row>
+        <row background-color="#dddddd" align-content="center">
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Peligros de incendio</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5lIMITiNFLAMA)</chunk>
             </cell>
         </row>
 
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Limites de inflamabilidad</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Limites de inflamabilidad</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5pELIiNCENeXPLO)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5pELIiNCENeXPLO)</chunk>
             </cell>
         </row>
 
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Medios de extinción</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Medios de extinción</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5mEDIeXTINCION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5mEDIeXTINCION)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Productos de la combustión</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Productos de la combustión</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5pROcOMBUSTION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5pROcOMBUSTION)</chunk>
             </cell>
         </row>
 
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Instrucciones contra fuego</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Instrucciones contra fuego</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5iNTRUCcONTRAfIRE)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5iNTRUCcONTRAfIRE)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Precauciones</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Precauciones</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">>@Html.DisplayFor(modelItem => item.C5pRECAUCIONES)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">>@Html.DisplayFor(modelItem => item.C5pRECAUCIONES)</chunk>
             </cell>
         </row>
     </table>
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Medidas en caso de vertigo accidental</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Medidas en caso de vertigo accidental</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C6mEDIvERDITO)</chunk>
+            <cell  borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C6mEDIvERDITO)</chunk>
             </cell>
 
         </row>
@@ -304,47 +304,47 @@
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Manejo y almacenamiento</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Manejo y almacenamiento</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Manejo</chunk>
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Manejo</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C7mANEJO)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C7mANEJO)</chunk>
             </cell>
 
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">Almacenaje</chunk>
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">Almacenaje</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C7aLMACENAMIENTO)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C7aLMACENAMIENTO)</chunk>
             </cell>
 
         </row>
     </table>}
 
-<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+<table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
     <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-        <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Controles de Exposición/Proteccion Personal</chunk></cell>
+        <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+        <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Controles de Exposición/Proteccion Personal</chunk></cell>
     </row>
     <row background-color="#dddddd" align-content="center">
 
-        <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-            <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">cONTROLES DE INGENIERÍA</chunk>
+        <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+            <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">cONTROLES DE INGENIERÍA</chunk>
         </cell>
         @foreach (var item in Model.Item1)
         {
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8cONTROLiNG)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C8cONTROLiNG)</chunk>
             </cell>
         }
     </row>
@@ -358,27 +358,27 @@
         if (item.C8pROTECCION != null)
         {
 
-            <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;15;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+            <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;15;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
                 <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">  Equipo Tecnico </chunk> </cell>
-                    <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left">- Hojas de Seguridad -  </chunk></cell>
-                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> Proteccion Personal</chunk> </cell>
+                    <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">  Equipo Tecnico </chunk> </cell>
+                    <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left">- Hojas de Seguridad -  </chunk></cell>
+                    <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> Proteccion Personal</chunk> </cell>
                 </row>
                 <row background-color="#dddddd" align-content="center">
 
-                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pROTECCIÓN</chunk>
+                    <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pROTECCIÓN</chunk>
                     </cell>
-                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">ePP</chunk>
+                    <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">ePP</chunk>
                     </cell>
-                    <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">mASINFO</chunk>
+                    <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">mASINFO</chunk>
                     </cell>
                 </row>
                 <row background-color="#dddddd" align-content="center">
                     <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8pROTECCION)</chunk>
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C8pROTECCION)</chunk>
                     </cell>
                     @{
                         int a99 = 0;
@@ -439,7 +439,7 @@
                                 if (fi != a60)
                                 {
                                     <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">
+                                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">
 
                                             @if (fi != a60)
                                 {
@@ -482,7 +482,7 @@
                         if (fe != a99)
                         {
                             <cell borderwidth="0" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">
+                                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">
                                     @if (fe != a99)
                                     {
                                         foreach (var item10 in Letter6)
@@ -503,7 +503,7 @@
                     }
 
                     <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C8mASiNFO)</chunk>
+                        <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C8mASiNFO)</chunk>
                     </cell>
                 </row>
 
@@ -517,94 +517,94 @@
 
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Propiedades físicas y quimicas</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Propiedades físicas y quimicas</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">aPARIENCIA</chunk>
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">aPARIENCIA</chunk>
             </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9aPARIENCIA)</chunk>
-            </cell>
-        </row>
-        <row background-color="#dddddd" align-content="center">
-
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">eSTADO fÍSICO</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9eSTADOfISICO)</chunk>
+            <cell  borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9aPARIENCIA)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">gRAVEDAD</chunk>
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">eSTADO fÍSICO</chunk>
             </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9gRAVEDAD)</chunk>
-            </cell>
-
-        </row>
-        <row background-color="#dddddd" align-content="center">
-
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">p eBULLICION</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9pUNTOeBULLI)</chunk>
-            </cell>
-
-        </row>
-        <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pUNTO fUNSION</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9pUNTOfUSION)</chunk>
+            <cell  borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9eSTADOfISICO)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">dENSIDAD</chunk>
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">gRAVEDAD</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9dENSIDAD)</chunk>
-            </cell>
-
-        </row>
-        <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">vISCOSIDAD</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9vISCOSIDAD)</chunk>
-            </cell>
-
-
-        </row>
-        <row background-color="#dddddd" align-content="center">
-
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pH</chunk>
-            </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9pH)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9gRAVEDAD)</chunk>
             </cell>
 
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">sOLUBILIDAD</chunk>
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">p eBULLICION</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C9sOLUBILIDAD)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9pUNTOeBULLI)</chunk>
+            </cell>
+
+        </row>
+        <row background-color="#dddddd" align-content="center">
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pUNTO fUNSION</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9pUNTOfUSION)</chunk>
+            </cell>
+        </row>
+        <row background-color="#dddddd" align-content="center">
+
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">dENSIDAD</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9dENSIDAD)</chunk>
+            </cell>
+
+        </row>
+        <row background-color="#dddddd" align-content="center">
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">vISCOSIDAD</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9vISCOSIDAD)</chunk>
+            </cell>
+
+
+        </row>
+        <row background-color="#dddddd" align-content="center">
+
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pH</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9pH)</chunk>
+            </cell>
+
+        </row>
+        <row background-color="#dddddd" align-content="center">
+
+            <cell  backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">sOLUBILIDAD</chunk>
+            </cell>
+            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C9sOLUBILIDAD)</chunk>
             </cell>
 
         </row>
@@ -614,11 +614,11 @@
     string a = "";
     foreach (var item in Model.Item1)
     {
-        <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="5;5;5" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+        <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="5;5;5" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
             <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-                <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-                <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> Propiedades físicas y quimicas</chunk></cell>
-                <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
+                <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+                <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> Propiedades físicas y quimicas</chunk></cell>
+                <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
              </row>
             <row background-color="#dddddd" align-content="center">
                 @{
@@ -648,125 +648,127 @@
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="8;20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center"> </chunk> </cell>
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> eSTABILIDAD Y rEACTIVIDAD</chunk></cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Right"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center"> </chunk> </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> eSTABILIDAD Y rEACTIVIDAD</chunk></cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">eSTABILIDAD qUIMICA</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">eSTABILIDAD qUIMICA</chunk>
             </cell>
-            <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C10eSTABILIquIMICA)</chunk>
+            <cell  borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C10eSTABILIquIMICA)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">cONDICIONES A eVITAR</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">cONDICIONES A eVITAR</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C10aeVITAR)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C10aeVITAR)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">iNCOMPATIBILIDAD qUIMICA</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">iNCOMPATIBILIDAD qUIMICA</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C10iNCOMPATIBILIDAD)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C10iNCOMPATIBILIDAD)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pRO pELIGROSOS X</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pRO pELIGROSOS X</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C10pRPpELIxdESCOM)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C10pRPpELIxdESCOM)</chunk>
             </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
-            <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">pOLIMERIZACIÓN pELIGROSA</chunk>
+            <cell backgroundcolor="#0042bf" borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">pOLIMERIZACIÓN pELIGROSA</chunk>
             </cell>
             <cell borderwidth="1" width="50%" left="true" right="true" top="true" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white">@Html.DisplayFor(modelItem => item.C10pOLIMERIZACION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black">@Html.DisplayFor(modelItem => item.C10pOLIMERIZACION)</chunk>
             </cell>
         </row>
     </table>
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left">  iNFORMACIÓN tOXOLOGICA    </chunk>   </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left">  iNFORMACIÓN tOXOLOGICA    </chunk>   </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C11iNFOtOXICOLOGICA)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.C11iNFOtOXICOLOGICA)</chunk>
             </cell>
         </row>
     </table>
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> iNFORMACIÓN eCOLOGÍCA</chunk>       </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> iNFORMACIPÓN DE rEGLAMENTACIÓN</chunk>       </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C12iNFOeCOLOGICA)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.C15iNFOrEGLAMENTA)</chunk>
             </cell>
         </row>
     </table>
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> dISPOSICION DE LOS pRODUCTOS</chunk>        </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> iNFORMACIÓN DE TRANSPORTE </chunk>       </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C13dISPOSICION)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.C14iNFOtRANSPORTE)</chunk>
             </cell>
         </row>
     </table>
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> iNFORMACIÓN DE TRANSPORTE </chunk>       </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left"> dISPOSICION DE LOS pRODUCTOS</chunk>        </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C14iNFOtRANSPORTE)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.C13dISPOSICION)</chunk>
             </cell>
         </row>
     </table>
 }
 @foreach (var item in Model.Item1)
 {
-    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#dd2d27" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
+    <table width="100%" cellpadding="1.0" cellspacing="0.5" backgroundcolor="#e8dede" widths="20" borderwidth="1" left="true" right="true" top="true" bottom="true" red="0" green="0" blue="0">
         <row background-color="#dddddd" align-content="center" widths="10;10;10;10" borderwidth="1">
-            <cell borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" horizontalalign="Left"> iNFORMACIPÓN DE rEGLAMENTACIÓN</chunk>       </cell>
+            <cell backgroundcolor="#4081f9" borderwidth="1"><chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" horizontalalign="Left">  iNFORMACIÓN eCOLOGÍCA</chunk>        </cell>
         </row>
         <row background-color="#dddddd" align-content="center">
 
             <cell borderwidth="1" vertical-align="top" left="false" right="false" top="false" bottom="true" horizontalalign="Center">
-                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="white" align="center">@Html.DisplayFor(modelItem => item.C15iNFOrEGLAMENTA)</chunk>
+                <chunk style="font-size:10;font-weight:bold;align-content:center; " color="black" align="center">@Html.DisplayFor(modelItem => item.C12iNFOeCOLOGICA)</chunk>
             </cell>
         </row>
     </table>
 }
 
 
-<newline />
+
+
+

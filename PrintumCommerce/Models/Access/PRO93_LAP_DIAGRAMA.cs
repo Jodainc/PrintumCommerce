@@ -7,6 +7,7 @@ using System.Web;
 
 namespace PrintumCommerce.Models.Access
 {
+    [Table("PRO93 LAP DIAGRAMA")]
     public class PRO93_LAP_DIAGRAMA
     {
         [StringLength(255)]

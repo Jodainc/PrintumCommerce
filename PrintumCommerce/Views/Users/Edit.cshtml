@@ -2,12 +2,13 @@
 
 @{
     ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Edit</h2>
 
 
-@using (Html.BeginForm("Edit", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
@@ -58,11 +59,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.UserPhotoFile, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.UserPhoto, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <span class="btn btn-default btn-file">
-                    @Html.TextBoxFor(modelo => modelo.UserPhotoFile, new { type = "file" })
-                </span>
+                @Html.EditorFor(model => model.UserPhoto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserPhoto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nit_Number, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nit_Number, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nit_Number, "", new { @class = "text-danger" })
             </div>
         </div>
 

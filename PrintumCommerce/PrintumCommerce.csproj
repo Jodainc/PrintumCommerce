@@ -350,6 +350,10 @@
     <Compile Include="Migrations\DBPrintumContext\201611171702104_Token.Designer.cs">
       <DependentUpon>201611171702104_Token.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\DBPrintumContext\201612141718457_Initial3.cs" />
+    <Compile Include="Migrations\DBPrintumContext\201612141718457_Initial3.Designer.cs">
+      <DependentUpon>201612141718457_Initial3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBPrintumContext\Configuration.cs" />
     <Compile Include="Migrations\Model1\201611032113583_Initial.cs" />
     <Compile Include="Migrations\Model1\201611032113583_Initial.Designer.cs">
@@ -434,6 +438,10 @@
     <Compile Include="Migrations\Model1\201612132055532_AddMissionStatement.cs" />
     <Compile Include="Migrations\Model1\201612132055532_AddMissionStatement.Designer.cs">
       <DependentUpon>201612132055532_AddMissionStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Model1\201612141242353_Initial19.cs" />
+    <Compile Include="Migrations\Model1\201612141242353_Initial19.Designer.cs">
+      <DependentUpon>201612141242353_Initial19.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Model1\ConfigurationB.cs" />
     <Compile Include="Models\Access\aDMIN_fORMULARIOS.cs" />
@@ -715,11 +723,6 @@
     <Content Include="Views\Companies\Details.cshtml" />
     <Content Include="Views\Companies\Edit.cshtml" />
     <Content Include="Views\Companies\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Home\PDF.cshtml" />
     <Content Include="Views\Shared\_PdfLayout.cshtml" />
     <Content Include="Views\tAUX_EPP\Create.cshtml" />
@@ -850,6 +853,11 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\api\Views\Shared\" />
@@ -885,6 +893,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBPrintumContext\201611171702104_Token.resx">
       <DependentUpon>201611171702104_Token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBPrintumContext\201612141718457_Initial3.resx">
+      <DependentUpon>201612141718457_Initial3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Model1\201611032113583_Initial.resx">
       <DependentUpon>201611032113583_Initial.cs</DependentUpon>
@@ -948,6 +959,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Model1\201612132055532_AddMissionStatement.resx">
       <DependentUpon>201612132055532_AddMissionStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Model1\201612141242353_Initial19.resx">
+      <DependentUpon>201612141242353_Initial19.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
