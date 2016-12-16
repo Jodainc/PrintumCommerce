@@ -37,10 +37,16 @@
             @Html.DisplayNameFor(model => model.UserAddress)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.cedula)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.UserPhoto)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.nit_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.troll)
         </th>
         <th></th>
     </tr>
@@ -70,6 +76,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UserAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.troll)
         </td>
         <td>
             @if (!string.IsNullOrEmpty(item.UserPhoto))

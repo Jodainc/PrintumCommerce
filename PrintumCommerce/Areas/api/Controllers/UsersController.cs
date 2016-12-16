@@ -15,6 +15,9 @@ using PrintumCommerce.Models;
 using System.Web;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
+using PrintumCommerce.ClassHelper;
+using System.Net.Mail;
+using System.Web.Configuration;
 
 namespace PrintumCommerce.Areas.api.Controllers
 {
@@ -84,19 +87,63 @@ namespace PrintumCommerce.Areas.api.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-        [System.Web.Http.Authorize]
         [ResponseType(typeof(Users))]
-        public IHttpActionResult PostUsers(Users users)
+        public  IHttpActionResult PostUsers(Users users)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            db.Users.Add(users);
-            db.SaveChanges();
-
+            try
+            {
+                db.Users.Add(users);
+                db.SaveChanges();
+                UsersHelper.CreateUserASP(users.UserName, "User");
+                //await SendMail();
+                string s = String.Format("hoy {0}, se registró un usuario con correo {1}. y con nombre {2} y apellido {3}",
+                             DateTime.Now, users.UserName, users.FirstName, users.LastName);
+                string s1 = String.Format("hoy {0}, se registró un usuario con correo {1}.",
+                             DateTime.Now, users.UserName);
+                var task = SendMail("soporte@printum-uv.com", s1, s);
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null && ex.InnerException.InnerException != null && ex.InnerException.Message.Contains("Index"))
+                {
+                    ModelState.AddModelError(string.Empty, "La casilla {0} ya existe en la tabla");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, ex.Message);
+                }
+            }
+            
             return CreatedAtRoute("DefaultApi", new { id = users.UserId }, users);
+        }
+
+        public static async Task SendMail(string to, string subject, string body)
+        {
+            var message = new MailMessage();
+            message.To.Add(new MailAddress(to));
+            message.From = new MailAddress(WebConfigurationManager.AppSettings["AdminUser"]);
+            message.Subject = subject;
+            message.Body = body;
+            message.IsBodyHtml = true;
+
+            using (var smtp = new SmtpClient())
+            {
+                var credential = new NetworkCredential
+                {
+                    UserName = WebConfigurationManager.AppSettings["AdminUser"],
+                    Password = WebConfigurationManager.AppSettings["AdminPassWord"]
+                };
+
+                smtp.Credentials = credential;
+                smtp.Host = WebConfigurationManager.AppSettings["SMTPName"];
+                smtp.Port = int.Parse(WebConfigurationManager.AppSettings["SMTPPort"]);
+                smtp.EnableSsl = true;
+                await smtp.SendMailAsync(message);
+            }
         }
         [System.Web.Http.Authorize]
         [ResponseType(typeof(Users))]

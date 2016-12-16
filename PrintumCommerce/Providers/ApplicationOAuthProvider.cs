@@ -10,6 +10,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using PrintumCommerce.Models;
+using PrintumCommerce.Areas.api.Models;
 
 namespace PrintumCommerce.Providers
 {
@@ -49,25 +50,77 @@ namespace PrintumCommerce.Providers
             context.Validated(ticket);
             context.Request.Context.Authentication.SignIn(cookiesIdentity);
         }
-
+        private DBPrintumContext db = new DBPrintumContext();
         public override Task TokenEndpoint(OAuthTokenEndpointContext context)
         {
+
             foreach (KeyValuePair<string, string> property in context.Properties.Dictionary)
             {
                 context.AdditionalResponseParameters.Add(property.Key, property.Value);
             }
 
+
             return Task.FromResult<object>(null);
+
         }
 
         public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
             // Resource owner password credentials does not provide a client ID.
-            if (context.ClientId == null)
+            /*
+            var q = from r in db.Users
+                    where r.UserName == context.
+                    select new Users
+                    {
+                        UserName = r.UserName,
+                        troll = r.troll,
+                        UserId = r.UserId
+                    };
+            int value = 0;
+            foreach (Users item in q.ToList())
             {
-                context.Validated();
+                value = item.troll;
+            }
+            if (value == 1)
+            {
+         
+            }
+            else
+            {
+
+            }
+            */
+            context.Parameters.ToList();
+            string values="";
+            foreach (var item in context.Parameters.ToList())
+            {
+                if (item.Key.Equals("username"))
+                {
+                    values = item.Value[0];
+                }
             }
 
+            var q = from r in db.Users
+                    where r.UserName == values
+                    select new Users
+                    {
+                        UserName = r.UserName,
+                        troll = r.troll,
+                        UserId = r.UserId
+                    };
+            int value = 0;
+            foreach (Users item in q.ToList())
+            {
+                value = item.troll;
+            }
+            if (value == 1)
+            {
+                if (context.ClientId == null)
+                {
+                    context.Validated();
+                }
+
+            }
             return Task.FromResult<object>(null);
         }
 

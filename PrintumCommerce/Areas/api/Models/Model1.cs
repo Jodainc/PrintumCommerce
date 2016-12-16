@@ -107,22 +107,25 @@
                 .HasMany(e => e.Companies)
                 .WithRequired(e => e.Cities)
                 .WillCascadeOnDelete(false);
-
+            /*
             modelBuilder.Entity<Cities>()
                 .HasMany(e => e.Users)
                 .WithRequired(e => e.Cities)
                 .WillCascadeOnDelete(false);
+            modelBuilder.Entity<DepartmentModels>()
+          .HasMany(e => e.Users)
+          .WithRequired(e => e.DepartmentModels)
+          .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Companies>()
+               .HasMany(e => e.Users)
+               .WithRequired(e => e.Companies)
+               .WillCascadeOnDelete(false);
+               */
 
             modelBuilder.Entity<Clientes>()
                 .HasMany(e => e.cLI_pRO_pROPIEDADES)
                 .WithOptional(e => e.Clientes)
                 .HasForeignKey(e => e.IDT);
-
-            modelBuilder.Entity<Companies>()
-                .HasMany(e => e.Users)
-                .WithRequired(e => e.Companies)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<DepartmentModels>()
                 .HasMany(e => e.Cities)
                 .WithRequired(e => e.DepartmentModels)
@@ -133,10 +136,7 @@
                 .WithRequired(e => e.DepartmentModels)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<DepartmentModels>()
-                .HasMany(e => e.Users)
-                .WithRequired(e => e.DepartmentModels)
-                .WillCascadeOnDelete(false);
+      
 
             modelBuilder.Entity<FC_Sem>()
                 .HasMany(e => e.FC_Bancos)

@@ -31,6 +31,10 @@ namespace PrintumCommerce.Areas.api.Models
         [StringLength(60)]
         public string UserAddress { get; set; }
 
+        public int nit_Number { get; set; }
+        public int cedula { get; set; }
+
+
         public string UserPhoto { get; set; }
 
         public int DepartmentId { get; set; }
@@ -39,10 +43,12 @@ namespace PrintumCommerce.Areas.api.Models
 
         public int CompanyId { get; set; }
 
-        public  Cities Cities { get; set; }
+        public int troll { get; set; }
 
-        public  Companies Companies { get; set; }
+        // public  Cities Cities { get; set; }
 
-        public  DepartmentModels DepartmentModels { get; set; }
+        //    public  Companies Companies { get; set; }
+
+        //  public  DepartmentModels DepartmentModels { get; set; }
     }
 }
