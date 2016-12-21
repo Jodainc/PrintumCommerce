@@ -61,9 +61,9 @@
                 </div>
             </li>
 </div>
-                                               
-                                                                                                 
-                                                        }
+
+
+    }
 </div>
                     <div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated" data-wow-delay=".5s">
                         <ul>
@@ -140,8 +140,8 @@
                         @if (!(Request.IsAuthenticated))
                         {
                                     <strong> Dear , Guest </strong>
-                                    
-                                   
+
+
 
                         }
 
@@ -346,8 +346,9 @@
                                 </li>
 
                                 <li><a href="codes.html">Ofertas Especiales</a></li>
-                                @if (User.IsInRole("AdminSystem"))
-                                {
+                                @{ 
+                                    if (User.IsInRole("AdminSystem"))
+                                    {
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">SuperUsuario<b class="caret"></b></a>
                                         <ul class="dropdown-menu multi-column multi-column1">
@@ -392,109 +393,122 @@
                                             </div>
                                         </ul>
                                     </li>
-                                }
-                                    @if (User.IsInRole("User"))
-                                    {
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
-                                            <ul class="dropdown-menu multi-column multi-column1">
-                                                <div class="row">
-                                                    <div class="col-sm-4 menu-grids menulist1">
-                                                        <h4>rECUBRIMIENTOS</h4>
-                                                        <ul class="multi-column-dropdown ">
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTO uV</a></li>
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTO bASE AGUA</a></li>
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTO pELICULA</a></li>
-                                                        </ul>
-
-                                                    </div>
-
-                                                    <div class="col-sm-3 menu-grids">
-                                                        <ul class="multi-column-dropdown">
-
-                                                            <h4>iNSUMO</h4>
-                                                            <li><a class="list" href="products.html">iNSUMO uV</a></li>
-                                                            <li><a class="list" href="products.html">iNSUMO eMPAQUE</a></li>
-                                                            <li><a class="list" href="products.html">iNSUMO oTRO</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-2 menu-grids">
-                                                        <h4>tINTAS</h4>
-                                                        <ul class="multi-column-dropdown">
-                                                            <li><a class="list" href="products.html">tINTA eTIQUETA</a></li>
-                                                            <li><a class="list" href="products.html">tINTA eNVAPLAST</a></li>
-                                                            <li><a class="list" href="products.html">tINTA eNVAMETAL</a></li>
-                                                            <li><a class="list" href="products.html">tINTA cONVENCIONAL</a></li>
-                                                            <li><a class="list" href="products.html">tINTA sEGURIDAD</a></li>
-                                                            <li><a class="list" href="products.html">tINTA pROMOCIONAL</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3 menu-grids">
-                                                        <ul class="multi-column-dropdown">
-                                                            <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
-                                                            <h4>Desarrollo tecnológico</h4>
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
-                                                            <li><a class="list" href="products.html">tINTAS</a></li>
-                                                            <li><a class="list" href="products.html">iNSUMO</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
-                                            <ul class="dropdown-menu multi-column multi-column1">
-                                                <div class="row">
-                                                    <div class="col-sm-4 menu-grids menulist1">
-                                                        <h4>rECUBRIMIENTOS</h4>
-                                                        <ul class="multi-column-dropdown ">
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTO uV</a></li>
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTO bASE AGUA</a></li>
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTO pELICULA</a></li>
-                                                        </ul>
-
-                                                    </div>
-
-                                                    <div class="col-sm-3 menu-grids">
-                                                        <ul class="multi-column-dropdown">
-
-                                                            <h4>iNSUMO</h4>
-                                                            <li><a class="list" href="products.html">iNSUMO uV</a></li>
-                                                            <li><a class="list" href="products.html">iNSUMO eMPAQUE</a></li>
-                                                            <li><a class="list" href="products.html">iNSUMO oTRO</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-2 menu-grids">
-                                                        <h4>tINTAS</h4>
-                                                        <ul class="multi-column-dropdown">
-                                                            <li><a class="list" href="products.html">tINTA eTIQUETA</a></li>
-                                                            <li><a class="list" href="products.html">tINTA eNVAPLAST</a></li>
-                                                            <li><a class="list" href="products.html">tINTA eNVAMETAL</a></li>
-                                                            <li><a class="list" href="products.html">tINTA cONVENCIONAL</a></li>
-                                                            <li><a class="list" href="products.html">tINTA sEGURIDAD</a></li>
-                                                            <li><a class="list" href="products.html">tINTA pROMOCIONAL</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3 menu-grids">
-                                                        <ul class="multi-column-dropdown">
-                                                            <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
-                                                            <h4>Desarrollo tecnológico</h4>
-                                                            <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
-                                                            <li><a class="list" href="products.html">tINTAS</a></li>
-                                                            <li><a class="list" href="products.html">iNSUMO</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix"> </div>
-                                                </div>
-                                            </ul>
-                                        </li>
                                     }
+                                    try
+                                    {
+                                        if (User.IsInRole("User"))
+                                        {
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
+                                            <ul class="dropdown-menu multi-column multi-column1">
+                                                <div class="row">
+                                                    <div class="col-sm-4 menu-grids menulist1">
+                                                        <h4>rECUBRIMIENTOS</h4>
+                                                        <ul class="multi-column-dropdown ">
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO uV</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO bASE AGUA</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO pELICULA</a></li>
+                                                        </ul>
 
-                               
+                                                    </div>
+
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+
+                                                            <h4>iNSUMO</h4>
+                                                            <li><a class="list" href="products.html">iNSUMO uV</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO eMPAQUE</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO oTRO</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-2 menu-grids">
+                                                        <h4>tINTAS</h4>
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><a class="list" href="products.html">tINTA eTIQUETA</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAPLAST</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAMETAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA cONVENCIONAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA sEGURIDAD</a></li>
+                                                            <li><a class="list" href="products.html">tINTA pROMOCIONAL</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
+                                                            <h4>Desarrollo tecnológico</h4>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
+                                                            <li><a class="list" href="products.html">tINTAS</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<b class="caret"></b></a>
+                                            <ul class="dropdown-menu multi-column multi-column1">
+                                                <div class="row">
+                                                    <div class="col-sm-4 menu-grids menulist1">
+                                                        <h4>rECUBRIMIENTOS</h4>
+                                                        <ul class="multi-column-dropdown ">
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO uV</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO bASE AGUA</a></li>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTO pELICULA</a></li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+
+                                                            <h4>iNSUMO</h4>
+                                                            <li><a class="list" href="products.html">iNSUMO uV</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO eMPAQUE</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO oTRO</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-2 menu-grids">
+                                                        <h4>tINTAS</h4>
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><a class="list" href="products.html">tINTA eTIQUETA</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAPLAST</a></li>
+                                                            <li><a class="list" href="products.html">tINTA eNVAMETAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA cONVENCIONAL</a></li>
+                                                            <li><a class="list" href="products.html">tINTA sEGURIDAD</a></li>
+                                                            <li><a class="list" href="products.html">tINTA pROMOCIONAL</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-3 menu-grids">
+                                                        <ul class="multi-column-dropdown">
+                                                            <li><h6><a class="list" href="products.html">Innovación</a></h6></li>
+                                                            <h4>Desarrollo tecnológico</h4>
+                                                            <li><a class="list" href="products.html">rECUBRIMIENTOS</a></li>
+                                                            <li><a class="list" href="products.html">tINTAS</a></li>
+                                                            <li><a class="list" href="products.html">iNSUMO</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="clearfix"> </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        <div class="col-sm-3 menu-grids">
+                                            <ul class="multi-column-dropdown">
+
+                                                <h4>iNSUMO</h4>
+                                                <li><a class="list" href="products.html">iNSUMO uV @Html.DisplayText(""+ex) </a></li>
+                    
+                                            </ul>
+                                        </div>
+                                    }
+                                }
 
                             </ul>
                             <div class="clearfix"> </div>

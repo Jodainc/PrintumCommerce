@@ -10,7 +10,7 @@ namespace AspNetIdentity.WebApi.Controllers
     public class BaseApiController : ApiController
     {
 
-        private ModelFactory _modelFactory;
+        //private ModelFactory _modelFactory;
         private ApplicationUserManager _AppUserManager = null;
        // private ApplicationRoleManager _AppRoleManager = null;
 
@@ -34,7 +34,7 @@ namespace AspNetIdentity.WebApi.Controllers
         public BaseApiController()
         {
         }
-
+       /*
         protected ModelFactory TheModelFactory
         {
             get
@@ -46,7 +46,7 @@ namespace AspNetIdentity.WebApi.Controllers
                 return _modelFactory;
             }
         }
-
+        */
         protected IHttpActionResult GetErrorResult(IdentityResult result)
         {
             if (result == null)

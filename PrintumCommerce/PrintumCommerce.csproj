@@ -217,82 +217,9 @@
     <Compile Include="Areas\api\Controllers\BaseApiController.cs" />
     <Compile Include="Areas\api\Controllers\Pro_CertificadosController.cs" />
     <Compile Include="Areas\api\Controllers\UsersController.cs" />
-    <Compile Include="Areas\api\Models\AspNetRoles.cs" />
-    <Compile Include="Areas\api\Models\AspNetUserLogins.cs" />
-    <Compile Include="Areas\api\Models\AspNetUsers.cs" />
-    <Compile Include="Areas\api\Models\Cities.cs" />
-    <Compile Include="Areas\api\Models\Clientes.cs" />
-    <Compile Include="Areas\api\Models\Clientes_CONTAC.cs" />
-    <Compile Include="Areas\api\Models\Clientes_Estadistica.cs" />
-    <Compile Include="Areas\api\Models\Clientes_Maquinas.cs" />
-    <Compile Include="Areas\api\Models\CLI_DIR.cs" />
-    <Compile Include="Areas\api\Models\CLI_dIR_OP.cs" />
-    <Compile Include="Areas\api\Models\cLI_lINExvENDOR.cs" />
-    <Compile Include="Areas\api\Models\cLI_pRO_pROPIEDADES.cs" />
-    <Compile Include="Areas\api\Models\Companies.cs" />
-    <Compile Include="Areas\api\Models\Credito.cs" />
-    <Compile Include="Areas\api\Models\DepartmentModels.cs" />
-    <Compile Include="Areas\api\Models\FC_Bancos.cs" />
-    <Compile Include="Areas\api\Models\FC_Creditos.cs" />
-    <Compile Include="Areas\api\Models\FC_Gastos.cs" />
-    <Compile Include="Areas\api\Models\FC_Proveedores.cs" />
-    <Compile Include="Areas\api\Models\FC_Saldo_Ayer.cs" />
-    <Compile Include="Areas\api\Models\FC_Sem.cs" />
-    <Compile Include="Areas\api\Models\iMPORTACIONES.cs" />
-    <Compile Include="Areas\api\Models\iMPORTACIONES_D.cs" />
-    <Compile Include="Areas\api\Models\lQ_fAC_dESCUENTOS_fIN.cs" />
-    <Compile Include="Areas\api\Models\lQ_fIGURAS.cs" />
-    <Compile Include="Areas\api\Models\lQ_lIST_dCTOS.cs" />
-    <Compile Include="Areas\api\Models\lQ_tpRO.cs" />
     <Compile Include="Areas\api\Models\Model1.cs" />
-    <Compile Include="Areas\api\Models\ModelFactory.cs" />
-    <Compile Include="Areas\api\Models\Pedidos.cs" />
-    <Compile Include="Areas\api\Models\Pedidos_Productos.cs" />
-    <Compile Include="Areas\api\Models\PRO1_Productos.cs" />
-    <Compile Include="Areas\api\Models\PRO2_Cuenta_con.cs" />
-    <Compile Include="Areas\api\Models\PRO3_Propiedades_de_Impresión.cs" />
-    <Compile Include="Areas\api\Models\PRO4_Propiedades_de_Aplicación.cs" />
-    <Compile Include="Areas\api\Models\PRO5_Referencias_Existentes.cs" />
-    <Compile Include="Areas\api\Models\PRO6_Recomendaciones_de_Procesamiento.cs" />
-    <Compile Include="Areas\api\Models\PRO7_Limpieza.cs" />
-    <Compile Include="Areas\api\Models\PRO8_Almacenamiento.cs" />
-    <Compile Include="Areas\api\Models\PRO91_Unidad_de_Empaque.cs" />
-    <Compile Include="Areas\api\Models\PRO92_lAP_Propiedades_medicion_mm.cs" />
-    <Compile Include="Areas\api\Models\PRO93_lAP_Propiedades_Electricas.cs" />
-    <Compile Include="Areas\api\Models\PRO94_Recomendaciones_de_Uso.cs" />
-    <Compile Include="Areas\api\Models\PRO95_Ventajas.cs" />
-    <Compile Include="Areas\api\Models\PRO96_Garantia.cs" />
-    <Compile Include="Areas\api\Models\PRO97_ServiTec.cs" />
-    <Compile Include="Areas\api\Models\PRO98_Propiedades.cs" />
-    <Compile Include="Areas\api\Models\PRO99_Pedido.cs" />
-    <Compile Include="Areas\api\Models\PRO9_Instrucciones_de_Seguridad.cs" />
-    <Compile Include="Areas\api\Models\Productos.cs" />
-    <Compile Include="Areas\api\Models\Proveedores_Productos.cs" />
     <Compile Include="Areas\api\Models\Pro_Certificados.cs" />
-    <Compile Include="Areas\api\Models\Pro_Envase.cs" />
-    <Compile Include="Areas\api\Models\Pro_Estandar.cs" />
-    <Compile Include="Areas\api\Models\Pro_Existencias.cs" />
-    <Compile Include="Areas\api\Models\Pro_Formula.cs" />
-    <Compile Include="Areas\api\Models\Pro_Grupos.cs" />
-    <Compile Include="Areas\api\Models\pRO_hsEG.cs" />
-    <Compile Include="Areas\api\Models\pRO_hsEG_cOMPO.cs" />
-    <Compile Include="Areas\api\Models\pRO_hsEG_ePP.cs" />
-    <Compile Include="Areas\api\Models\pRO_hsEG_oTRAiNFO.cs" />
-    <Compile Include="Areas\api\Models\Pro_Lineas.cs" />
-    <Compile Include="Areas\api\Models\pRO_lN.cs" />
-    <Compile Include="Areas\api\Models\Pro_Medicion.cs" />
-    <Compile Include="Areas\api\Models\Pro_MP_Pedidos.cs" />
-    <Compile Include="Areas\api\Models\PRO_OC.cs" />
-    <Compile Include="Areas\api\Models\PRO_OC_D.cs" />
-    <Compile Include="Areas\api\Models\PRO_OC_NC.cs" />
-    <Compile Include="Areas\api\Models\Pro_Presentacion.cs" />
-    <Compile Include="Areas\api\Models\Pro_pRUEBAS.cs" />
-    <Compile Include="Areas\api\Models\Pro_Salidas_Muestras_fECHAS.cs" />
-    <Compile Include="Areas\api\Models\Pro_Salida_Muestras.cs" />
-    <Compile Include="Areas\api\Models\Pro_Salida_Muestras_D.cs" />
-    <Compile Include="Areas\api\Models\Pro_Tiempo.cs" />
-    <Compile Include="Areas\api\Models\Pro_Valores.cs" />
-    <Compile Include="Areas\api\Models\Users.cs" />
+    <Compile Include="Areas\api\Models\User.cs" />
     <Compile Include="Areas\api\Models\VT_TRM.cs" />
     <Compile Include="ClassHelper\ComboHelper.cs" />
     <Compile Include="ClassHelper\FilHelper.cs" />
@@ -334,6 +261,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\DBPrintumContext\201611032114121_Initial.cs" />
     <Compile Include="Migrations\DBPrintumContext\201611032114121_Initial.Designer.cs">
       <DependentUpon>201611032114121_Initial.cs</DependentUpon>
@@ -361,6 +289,10 @@
     <Compile Include="Migrations\DBPrintumContext\201612161629198_End.cs" />
     <Compile Include="Migrations\DBPrintumContext\201612161629198_End.Designer.cs">
       <DependentUpon>201612161629198_End.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBPrintumContext\201612191658184_AddMissionStatement.cs" />
+    <Compile Include="Migrations\DBPrintumContext\201612191658184_AddMissionStatement.Designer.cs">
+      <DependentUpon>201612191658184_AddMissionStatement.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DBPrintumContext\Configuration.cs" />
     <Compile Include="Migrations\Model1\201611032113583_Initial.cs" />
@@ -668,6 +600,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ClassDiagram1.cd" />
     <Content Include="Areas\api\Views\web.config" />
+    <None Include="Properties\PublishProfiles\Jodas.pubxml" />
+    <None Include="Properties\PublishProfiles\Jos.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -876,7 +810,6 @@
     <Folder Include="Content\js\" />
     <Folder Include="Content\StatePho\" />
     <Folder Include="Controllers\Pro_Presantation\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -910,6 +843,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBPrintumContext\201612161629198_End.resx">
       <DependentUpon>201612161629198_End.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBPrintumContext\201612191658184_AddMissionStatement.resx">
+      <DependentUpon>201612191658184_AddMissionStatement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\Model1\201611032113583_Initial.resx">
       <DependentUpon>201611032113583_Initial.cs</DependentUpon>
@@ -996,11 +932,10 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58126</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8080/</IISUrl>
+          <IISUrl>http://localhost:8081/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl>http://192.168.0.2/Printum</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

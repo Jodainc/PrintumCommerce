@@ -8,12 +8,6 @@ namespace PrintumCommerce.Areas.api.Models
 
     public partial class Pro_Certificados
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pro_Certificados()
-        {
-            Pro_Medicion = new HashSet<Pro_Medicion>();
-        }
-
         [Key]
         public double No { get; set; }
 
@@ -30,10 +24,5 @@ namespace PrintumCommerce.Areas.api.Models
 
         [StringLength(255)]
         public string cERTIdRIVE { get; set; }
-
-        public  Productos Productos { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<Pro_Medicion> Pro_Medicion { get; set; }
     }
 }

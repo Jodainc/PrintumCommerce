@@ -102,14 +102,14 @@ namespace PrintumCommerce.Providers
 
             var q = from r in db.Users
                     where r.UserName == values
-                    select new Users
+                    select new Areas.api.Models.User
                     {
                         UserName = r.UserName,
                         troll = r.troll,
                         UserId = r.UserId
                     };
             int value = 0;
-            foreach (Users item in q.ToList())
+            foreach (Areas.api.Models.User item in q.ToList())
             {
                 value = item.troll;
             }

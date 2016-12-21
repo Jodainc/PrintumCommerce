@@ -74,7 +74,7 @@ namespace PrintumCommerce.Areas.api.Controllers
         public IHttpActionResult GetPro_Certificados(string id)
         {
             var q = from r in db.Pro_Certificados
-                    where (r.Cod_producto == id)
+                    where (r.Presentacion == id)
                     select new
                     {
                         C8Codigo = r.Cod_producto,
